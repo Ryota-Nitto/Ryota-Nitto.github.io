@@ -4,9 +4,9 @@ Ph.D Student,
 Guraduate School of Frontier Sciences,
 The University of Tokyo
 
-> Address: #304 Environmental Studies Building, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan
-Phone: +81 80-3431-4708
-E-mail: **nittoryota*@lelab.t.u-tokyo.ac.jp*
+> Address: #304 Environmental Studies Building, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan<br>
+Phone: +81 80-3431-4708<br>
+E-mail: nittoryota@lelab.t.u-tokyo.ac.jp
 
 ## Education
 - **April 2024 - Current**
