@@ -1,7 +1,8 @@
 # Ryota NITTO
 
-Ph.D Student, 
-Guraduate School of Frontier Sciences,
+Ph.D Student<br>
+Human & Environment Informatics Lab.<br>
+Graduate School of Frontier Sciences<br>
 The University of Tokyo
 
 > Address: #304 Environmental Studies Building, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan<br>
