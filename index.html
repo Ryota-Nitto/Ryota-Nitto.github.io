@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | 日常を演奏する</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --text: #e0e0e0;
+            --accent: #00f2ff; /* サイバー・アクア */
+            --sub-accent: #bc13fe; /* 身体拡張・パープル */
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 背景のアニメーション（演奏の波形をイメージ） */
+        .bg-wave {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+            background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 1px solid var(--card-bg);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--accent), var(--sub-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            max-width: 700px;
+            letter-spacing: 0.1em;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 40px;
+        }
+
+        /* 3つの柱のグリッド */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .pillar-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .pillar-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* プロジェクトセクション */
+        .project-item {
+            display: flex;
+            margin-bottom: 80px;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .project-info { flex: 2; }
+        .project-meta {
+            flex: 1;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .tag-row {
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+
+        .status-badge {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+            background: var(--card-bg);
+        }
+
+        /* スクロールアニメーション用 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .project-item { flex-direction: column; }
+            .hero-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-wave"></div>
+
+<header>
+    <div class="status-badge">Ph.D. Student / Interaction Designer</div>
+    <h1 class="hero-title">日常の構造をハックし、<br>能動的な「演奏」へと書き換える</h1>
+    <p class="hero-sub">
+        私は、静的で受動的な日常体験を、インタラクション技術によって「能動的な演奏体験」へと変容させることを信条としています。
+    </p>
+</header>
+
+<section class="reveal">
+    <h2>STATEMENT</h2>
+    <blockquote style="font-size: 1.25rem; border-left: 2px solid var(--sub-accent); padding-left: 20px; font-style: italic;">
+        「単なる利便性の追求ではなく、ユーザーが世界に対して主体的に関与できる『自己効力感』を設計する。」
+    </blockquote>
+</section>
+
+<section id="pillars" class="reveal">
+    <h2>CORE STRENGTHS</h2>
+    <div class="pillar-grid">
+        <div class="pillar-card">
+            <span class="pillar-tag">01. Research</span>
+            <h3>生理的メカニズムへの介入</h3>
+            <p>味覚の「馴化」を制御するDynaDrinkの開発。コクとキレの両立を科学的に証明し、飲料を動的メディアへと再定義。</p>
+        </div>
+        <div class="pillar-card">
+            <span class="pillar-tag">02. Development</span>
+            <h3>体験の実装力</h3>
+            <p>抽象概念を身体的没入へと翻訳。歩行を奏でる「Beatim」や、身体感覚を融解させる「わたぱ」など、独自のデバイスをフルスクラッチで実装。</p>
+        </div>
+        <div class="pillar-card">
+            <span class="pillar-tag">03. Management</span>
+            <h3>既存システムの再定義</h3>
+            <p>「プラレーラーズ」を通じたチームビルディング。既製品のルールを「乗っ取り」、新しい論理体系を構築するリーダーシップ。</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>SELECTED PROJECTS</h2>
+
+    <div class="project-item reveal">
+        <div class="project-info">
+            <span class="status-badge">Journal: Frontiers in Nutrition / ISOT / VR学会</span>
+            <h3 class="project-title">DynaDrink</h3>
+            <div class="tag-row">
+                <span class="tag">Taste Interaction</span><span class="tag">Physiology</span><span class="tag">Fluidics</span>
+            </div>
+            <p>液体という静的な物質に「時間」という変数を組み込み、生理的な飽きを人工的な動的変化によって打ち消し続ける**「味覚の動態設計」**。飲み過ぎという健康課題に対し、満足感の持続というアプローチで解決を試みました。</p>
+        </div>
+        <div class="project-meta">
+            <strong>Motivations:</strong><br>甘いものへの愛と、健康被害への危機意識の止揚。
+        </div>
+    </div>
+
+    <div class="project-item reveal">
+        <div class="project-info">
+            <span class="status-badge">Conf: Augmented Humans / Award: Ignite Your Ambition 2022</span>
+            <h3 class="project-title">Beatim</h3>
+            <div class="tag-row">
+                <span class="tag">Mobile App</span><span class="tag">Sonic Interaction</span><span class="tag">Body Extension</span>
+            </div>
+            <p>無意識の「歩行」を、能動的な「演奏」へと書き換える。自分の身体に対する支配感と没入感を極大化させる。株式会社Beatimを設立し、社会実装への道筋を構築。</p>
+        </div>
+        <div class="project-meta">
+            <strong>Motivations:</strong><br>音楽と歩行が完全一致する「快感」の追求と普及。
+        </div>
+    </div>
+
+    <div class="project-item reveal">
+        <div class="project-info">
+            <span class="status-badge">Exhibition: Maker Faire Tokyo / 五月祭 / 駒場祭</span>
+            <h3 class="project-title">プラレーラーズ</h3>
+            <div class="tag-row">
+                <span class="tag">IoT</span><span class="tag">Reverse Engineering</span><span class="tag">System Design</span>
+            </div>
+            <p>既定の遊び方をハックし、物理的なモノの背後に自分だけの論理体系を構築。個人の技術をチームで拡張し、巨大な運行システムへと結実させました。</p>
+        </div>
+        <div class="project-meta">
+            <strong>Motivations:</strong><br>幼少期からの熱狂を、最新技術で「大人のシステム」へ。
+        </div>
+    </div>
+
+    <div class="project-item reveal">
+        <div class="project-info">
+            <span class="status-badge">Expo 2025 Osaka: サントリー・ダイキン「水空」</span>
+            <h3 class="project-title">空気清浄感を高める食事体験</h3>
+            <div class="tag-row">
+                <span class="tag">VR</span><span class="tag">Cross-modal</span><span class="tag">Experimental Design</span>
+            </div>
+            <p>登山の原体験から、空気の心地よさを設計。VRを用いた実証実験を経て、実際のパビリオン設計へと還元。</p>
+        </div>
+        <div class="project-meta">
+            <strong>Motivations:</strong><br>自然の心地よさを科学的に定義し、都市に再実装する。
+        </div>
+    </div>
+</section>
+
+<section class="reveal" style="text-align: center;">
+    <h2>VISION</h2>
+    <p style="font-size: 1.4rem;">
+        世界がまだ満足してしまっている「当たり前の日常」を、<br>
+        驚きと没入に満ちた「能動的な舞台」へとアップデートする。
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Your Name - Ph.D. Student at U-Tokyo</p>
+    <p style="font-size: 0.8rem; color: #666;">Built with Passion for HCI & Engineering</p>
+</footer>
+
+<script>
+    // スクロール時のフェードイン演出
+    const reveals = document.querySelectorAll(".reveal");
+    const revealOnScroll = () => {
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                el.classList.add("active");
+            }
+        });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // 初期表示用
+</script>
+
+</body>
+</html>
