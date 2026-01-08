@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryota Nitto | Portfolio</title>
+    <title>Ryota NITTO | Academic Portfolio</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
@@ -11,7 +11,8 @@
             --text: #e0e0e0;
             --accent: #00f2ff;
             --sub-accent: #bc13fe;
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.1);
         }
 
         body {
@@ -19,88 +20,159 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
             margin: 0;
-            line-height: 1.8;
-            overflow-x: hidden;
+            line-height: 1.5;
         }
 
         .bg-wave {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
-            opacity: 0.15;
+            opacity: 0.1;
             background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);
         }
 
-        header {
-            height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
+        .container {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: var(--border);
+            gap: 1px;
+        }
+
+        /* --- 左カラム --- */
+        .sidebar {
+            background-color: var(--bg);
+            padding: 40px;
+            height: 100%;
         }
 
         .profile-img {
-            width: 150px; height: 150px;
-            border-radius: 50%;
+            width: 120px; height: 120px;
+            border-radius: 15px;
             object-fit: cover;
-            border: 3px solid var(--accent);
+            border: 2px solid var(--accent);
             margin-bottom: 20px;
         }
 
-        .my-name { font-size: 2rem; font-weight: 700; margin: 0; }
-        .hero-title {
-            font-size: 2.8rem; font-weight: 800;
-            background: linear-gradient(90deg, var(--accent), var(--sub-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 15px 0;
-            line-height: 1.2;
+        .name-en { font-size: 1.8rem; font-weight: 800; margin: 0; color: #fff; }
+        .name-ja { font-size: 1.1rem; opacity: 0.7; margin-bottom: 20px; }
+
+        .contact-info { font-size: 0.8rem; margin-bottom: 40px; line-height: 1.8; }
+        .contact-info svg { width: 14px; height: 14px; margin-right: 8px; color: var(--accent); vertical-align: middle; }
+
+        .sidebar-section { margin-bottom: 35px; }
+        .sidebar-section h3 { font-size: 0.85rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.15em; border-bottom: 1px solid var(--border); padding-bottom: 5px; margin-bottom: 15px; }
+        
+        .edu-item { margin-bottom: 15px; font-size: 0.85rem; }
+        .edu-date { font-weight: bold; color: #fff; display: block; margin-bottom: 2px; }
+        
+        .skill-list { display: flex; flex-wrap: wrap; gap: 6px; }
+        .skill-tag { background: var(--card-bg); padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; border: 1px solid var(--border); }
+
+        /* --- 右カラム --- */
+        .main-content {
+            background-color: var(--bg);
+            padding: 40px 50px;
         }
 
-        section { max-width: 1000px; margin: 120px auto; padding: 0 25px; }
-        h2 { font-size: 1.8rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 0.1em; }
+        /* Mission Section */
+        .mission-box {
+            background: linear-gradient(135deg, rgba(0, 242, 255, 0.05), rgba(188, 19, 254, 0.05));
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--sub-accent);
+            margin-bottom: 50px;
+        }
+        .mission-title {
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 800;
+        }
+        .mission-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.6;
+            margin: 0;
+        }
 
-        /* CORE STRENGTHS (3 Pillars) */
-        .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .pillar-card { background: var(--card-bg); padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
-        .pillar-tag { color: var(--accent); font-weight: bold; font-size: 0.8rem; margin-bottom: 10px; display: block; }
-        .pillar-card h3 { margin-top: 0; font-size: 1.4rem; }
-
-        /* PROJECTS */
-        .project-item {
+        .section-title {
+            font-size: 1.4rem;
+            margin: 50px 0 25px 0;
             display: flex;
-            gap: 50px;
-            margin-bottom: 120px;
-            align-items: flex-start;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
         }
-        .project-img-box { flex: 1; min-width: 320px; }
-        .project-img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
-        .project-info { flex: 1.4; }
+        .section-title svg { color: var(--accent); width: 24px; height: 24px; }
 
-        .project-title { font-size: 2.4rem; margin: 0 0 10px 0; font-weight: 800; }
-        .tag { display: inline-block; background: rgba(0, 242, 255, 0.1); color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; margin: 0 8px 10px 0; font-weight: bold; }
-
-        .project-meta { background: var(--card-bg); padding: 20px; border-radius: 12px; margin-top: 25px; font-size: 0.9rem; }
-
-        .link-btn {
-            display: inline-flex; align-items: center; margin-top: 20px;
-            padding: 12px 28px; background: linear-gradient(45deg, var(--accent), var(--sub-accent));
-            color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 0.9rem; transition: transform 0.2s;
+        /* グリッドレイアウト */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .link-btn:hover { transform: scale(1.05); }
-        .link-btn i, .link-btn svg { margin-right: 8px; width: 18px; height: 18px; }
 
-        /* アニメーション用設定 */
-        .reveal { opacity: 1; transform: translateY(0); transition: all 1s ease-out; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-3px); background: rgba(255,255,255,0.06); }
+        .card h4 { margin: 0 0 12px 0; color: var(--accent); font-size: 1.1rem; }
+        .card p { font-size: 0.85rem; opacity: 0.8; margin: 0; line-height: 1.6; }
 
-        footer { text-align: center; padding: 100px 20px; color: #666; font-size: 0.9rem; border-top: 1px solid var(--card-bg); }
+        /* プロジェクトカード */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+        .project-card:hover { border-color: var(--accent); }
+        .card-img { width: 100%; height: 160px; object-fit: cover; }
+        .project-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .project-title { font-size: 1.2rem; margin: 0 0 10px 0; color: #fff; }
+        .tag { font-size: 0.7rem; background: rgba(0, 242, 255, 0.1); color: var(--accent); padding: 2px 8px; border-radius: 4px; margin-right: 5px; font-weight: bold; }
+        
+        .btn {
+            text-decoration: none; font-size: 0.7rem; font-weight: bold; color: #fff;
+            background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 6px;
+            display: inline-flex; align-items: center; gap: 5px; margin-top: auto; width: fit-content;
+        }
+        .btn:hover { background: var(--accent); color: #000; }
 
-        @media (max-width: 850px) {
-            .project-item { flex-direction: column; gap: 30px; }
-            .project-img-box { min-width: 100%; }
-            .hero-title { font-size: 2rem; }
+        /* リスト系 */
+        .list-item {
+            padding: 12px 15px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            display: flex;
+            gap: 15px;
+        }
+        .item-idx { color: var(--accent); font-weight: bold; }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 1100px) {
+            .container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -108,149 +180,155 @@
 
 <div class="bg-wave"></div>
 
-<header>
-    <img src="images/face.jpeg" alt="Ryota Nitto" class="profile-img">
-    <div class="my-name">日塔 諒太 / Ryota Nitto</div>
-    <div style="color: var(--accent); margin-top: 5px; font-weight: bold; letter-spacing: 0.1em;">Ph.D. Student / Interaction Designer</div>
-    <h1 class="hero-title">日常の構造をハックし、<br>能動的な「演奏」へと書き換える</h1>
-    <p style="opacity: 0.7;">東京大学 大学院新領域創成科学研究科 博士課程</p>
-</header>
-
-<section class="reveal">
-    <h2>STATEMENT</h2>
-    <p style="font-size: 1.3rem; font-style: italic; border-left: 4px solid var(--sub-accent); padding-left: 25px; color: #ccc;">
-        「単なる利便性の追求ではなく、日常の構造をハックし、ユーザーが世界に対して主体的に関与できる『自己効力感』を設計する。」
-    </p>
-</section>
-
-<section id="pillars" class="reveal">
-    <h2>CORE STRENGTHS</h2>
-    <div class="pillar-grid">
-        <div class="pillar-card">
-            <span class="pillar-tag">01. RESEARCH</span>
-            <h3>味覚の動態設計</h3>
-            <p>飲料における「馴化」を制御するDynaDrinkを開発。物質を動的メディアへと再定義し、生理的な飽きをハックします。</p>
+<div class="container">
+    <aside class="sidebar">
+        <img src="images/face.jpeg" alt="Ryota Nitto" class="profile-img">
+        <h1 class="name-en">Ryota NITTO</h1>
+        <div class="name-ja">日塔 諒太 / Ph.D Student</div>
+        
+        <div class="contact-info">
+            <div><i data-lucide="building"></i>The University of Tokyo</div>
+            <div><i data-lucide="map-pin"></i>#304 Environmental Studies Bldg, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan</div>
+            <div><i data-lucide="mail"></i>nittoryota@lelab.t.u-tokyo.ac.jp</div>
+            <div><i data-lucide="phone"></i>+81 80-3431-4708</div>
         </div>
-        <div class="pillar-card">
-            <span class="pillar-tag">02. DEVELOPMENT</span>
-            <h3>体験の実装力</h3>
-            <p>抽象概念を独自のデバイスで「誰もが体験可能な現実」へ翻訳。歩行を奏でる等の未知の身体感覚を物理実装します。</p>
-        </div>
-        <div class="pillar-card">
-            <span class="pillar-tag">03. MANAGEMENT</span>
-            <h3>システムの再定義</h3>
-            <p>既製品のルールをハックし、新しい論理体系を構築。多様な専門性を統合し、大規模な世界観を具現化します。</p>
-        </div>
-    </div>
-</section>
 
-<section id="projects">
-    <h2>SELECTED PROJECTS</h2>
-
-    <div class="project-item reveal">
-        <div class="project-img-box"><img src="images/DynaDrink.png" class="project-img" alt="DynaDrink"></div>
-        <div class="project-info">
-            <h3 class="project-title">DynaDrink</h3>
-            <div class="tag">Taste Interaction</div><div class="tag">Physiology</div>
-            <p>液体という静的な物質に「時間」という変数を組み込み、生理的な飽きを人工的な変化によって打ち消し続ける。本来トレードオフにある「コク」と「キレ」の両立を科学的に証明しました。</p>
-            <div class="project-meta">
-                <strong>Journal/Conference:</strong> Frontiers in Nutrition / ISOT / VR学会<br>
-                <strong>Motivation:</strong> 甘い飲料への愛と、健康維持の両立を目指した「美味しさの持続」。
+        <div class="sidebar-section">
+            <h3>Education</h3>
+            <div class="edu-item">
+                <span class="edu-date">Apr. 2024 - Current (Ph.D)</span>
+                Graduate School of Frontier Sciences, U-Tokyo<br>
+                Advisor: Shin'ichi WARISAWA and Yuki BAN
             </div>
-            <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1561107/full" target="_blank" class="link-btn">
-                <i data-lucide="file-text"></i> 論文を読む
-            </a>
-        </div>
-    </div>
-
-    <div class="project-item reveal">
-        <div class="project-img-box"><img src="images/beatim.png" class="project-img" alt="Beatim"></div>
-        <div class="project-info">
-            <h3 class="project-title">Beatim</h3>
-            <div class="tag">Sonic Interaction</div><div class="tag">Mobile App</div>
-            <p>無意識の「歩行」を能動的な「演奏」へと書き換える。歩行の衝撃をリアルタイムで音楽に昇華させ、身体への支配感と没入感を極大化。株式会社Beatimとして社会実装を展開中。</p>
-            <div class="project-meta">
-                <strong>Award:</strong> Ignite Your Ambition 2022 審査員特別賞<br>
-                <strong>Motivation:</strong> 音楽と歩行が一致する圧倒的な「快感」を社会に広めたかった。
+            <div class="edu-item">
+                <span class="edu-date">Apr. 2022 - Mar. 2024 (Master)</span>
+                Graduate School of Frontier Sciences, U-Tokyo
             </div>
-            <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="link-btn">
-                <i data-lucide="smartphone"></i> App Store
-            </a>
-        </div>
-    </div>
-
-    <div class="project-item reveal">
-        <div class="project-img-box"><img src="images/plarailers.jpg" class="project-img" alt="Plarailers"></div>
-        <div class="project-info">
-            <h3 class="project-title">プラレーラーズ</h3>
-            <div class="tag">IoT</div><div class="tag">System Design</div>
-            <p>走るだけのプラレールに独自の論理体系を構築する。既製品の遊び方をハックし、物理的なモノの背後に高度な鉄道運行システムを実現。技術をチームで拡張した実践例です。</p>
-            <div class="project-meta">
-                <strong>Exhibition:</strong> Maker Faire Tokyo / 五月祭 / 駒場祭<br>
-                <strong>Motivation:</strong> 幼少期からのプラレール愛を、大学で培ったエンジニアリングで具現化。
+            <div class="edu-item">
+                <span class="edu-date">Apr. 2018 - Mar. 2022 (Bachelor)</span>
+                Department of Mechanical Engineering, U-Tokyo
             </div>
-            <a href="https://plarailers.com/" target="_blank" class="link-btn">
-                <i data-lucide="external-link"></i> プロジェクトHP
-            </a>
         </div>
-    </div>
 
-    <div class="project-item reveal">
-        <div class="project-img-box"><img src="images/watapa.jpeg" class="project-img" alt="Watapa"></div>
-        <div class="project-info">
-            <h3 class="project-title">わたぱ</h3>
-            <div class="tag">Body Extension</div><div class="tag">HCI</div>
-            <p>「自分がわたあめになって食べられる」という形而上概念を物理実装。身体感覚の融解を狙った体験設計であり、狂気的なアイデアを現実へ着地させる「実装力」の象徴です。</p>
+        <div class="sidebar-section">
+            <h3>Skills</h3>
+            <div class="skill-list">
+                <span class="skill-tag">Python</span><span class="skill-tag">C++</span><span class="skill-tag">C</span>
+                <span class="skill-tag">Processing</span><span class="skill-tag">Arduino</span><span class="skill-tag">Dart</span>
+                <span class="skill-tag">Swift</span><span class="skill-tag">Fusion 360</span><span class="skill-tag">Inventor</span>
+                <span class="skill-tag">3D Printing</span><span class="skill-tag">Laser Cutting</span>
+            </div>
         </div>
-    </div>
 
-    <div class="project-item reveal">
-        <div class="project-img-box"><img src="images/suikuu.jpeg" class="project-img" alt="Osaka Expo"></div>
-        <div class="project-info">
-            <h3 class="project-title">大阪万博「水空」食事体験設計</h3>
-            <div class="tag">Expo 2025 Osaka</div><div class="tag">VR Evaluation</div>
-            <p>サントリー・ダイキン共同パビリオンにて、空気清浄感を高める食事体験を設計。VRを用いた実証実験を行い、その知見が実際のパビリオン設計へと還元されました。</p>
+        <div class="sidebar-section">
+            <h3>Fellowship</h3>
+            <div class="edu-item">JST SPRING GX (2024 - Current)</div>
         </div>
-    </div>
-</section>
 
-<section class="reveal" style="text-align: center;">
-    <h2>VISION</h2>
-    <p style="font-size: 1.5rem; font-weight: 700;">
-        世界がまだ満足してしまっている「当たり前の日常」を、<br>
-        驚きと没入に満ちた「能動的な舞台」へとアップデートする。
-    </p>
-</section>
+        <div class="sidebar-section">
+            <h3>Language</h3>
+            <div class="edu-item">Japanese (Native) / English (Business)</div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        
+        <div class="mission-box">
+            <span class="mission-title">Mission</span>
+            <p class="mission-text">
+                &mdash;日常の構造をハックし、能動的な「演奏」へと書き換える。&mdash;<br>
+                人々が世界に対して主体的に関与できる「自己効力感」を設計することが私の提供価値です。
+            </p>
+        </div>
+
+        <h2 class="section-title"><i data-lucide="brain"></i> Research Interests</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>Human-Food Interaction (HFI)</h4>
+                <p>機械的介入による新しい味覚体験の創出。味覚刺激の時系列変化を利用し、糖分や温度を変えずに知覚を強化するデバイスを開発し、食体験を再定義します。</p>
+            </div>
+            <div class="card">
+                <h4>Experience Engineering</h4>
+                <p>機械・電子・情報工学を統合し、「自分を食べる」「歩行を奏でる」といった言語化困難な抽象概念を、独自のシステムによって誰もが体験可能な現実へと翻訳します。</p>
+            </div>
+        </div>
+
+        <h2 class="section-title"><i data-lucide="layout"></i> Creative Projects</h2>
+        <div class="grid">
+            <div class="project-card">
+                <img src="images/DynaDrink.png" class="card-img">
+                <div class="project-body">
+                    <h3 class="project-title">DynaDrink</h3>
+                    <div style="margin-bottom:10px;"><span class="tag">Taste Interaction</span></div>
+                    <p class="card-text" style="font-size:0.85rem; opacity:0.8; margin-bottom:15px;">糖分を変えずに甘味を強化する「味覚の動態設計」。</p>
+                    <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1561107/full" target="_blank" class="btn"><i data-lucide="file-text"></i> Paper</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/beatim.png" class="card-img">
+                <div class="project-body">
+                    <h3 class="project-title">Beatim</h3>
+                    <div style="margin-bottom:10px;"><span class="tag">Sonic Interaction</span></div>
+                    <p class="card-text" style="font-size:0.85rem; opacity:0.8; margin-bottom:15px;">歩行と音楽を統合し、身体運動を演奏へと昇華させる。</p>
+                    <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn"><i data-lucide="link"></i> App Store</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/plarailers.jpg" class="card-img">
+                <div class="project-body">
+                    <h3 class="project-title">Plarailers</h3>
+                    <div style="margin-bottom:10px;"><span class="tag">IoT / System Hack</span></div>
+                    <p class="card-text" style="font-size:0.85rem; opacity:0.8; margin-bottom:15px;">玩具を電子改造し、高度な鉄道運行システムを構築。</p>
+                    <a href="https://plarailers.com" target="_blank" class="btn"><i data-lucide="link"></i> Website</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/watapa.jpeg" class="card-img">
+                <div class="project-body">
+                    <h3 class="project-title">わたぱ</h3>
+                    <div style="margin-bottom:10px;"><span class="tag">Body Extension</span></div>
+                    <p class="card-text" style="font-size:0.85rem; opacity:0.8; margin-bottom:15px;">「自分を食べる」という形而上概念を物理実装した体験設計。</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/suikuu.jpeg" class="card-img">
+                <div class="project-body">
+                    <h3 class="project-title">大阪万博「水空」</h3>
+                    <div style="margin-bottom:10px;"><span class="tag">VR / Cross-modal</span></div>
+                    <p class="card-text" style="font-size:0.85rem; opacity:0.8; margin-bottom:15px;">空気清浄感を高める食事体験。パビリオンの設計に活用。</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title"><i data-lucide="award"></i> Awards</h2>
+        <div class="list-item"><span class="item-idx">1</span> <strong>Best Presentation Award</strong>, 24th SICE (2023) "Thermal Stimulation..."</div>
+        <div class="list-item"><span class="item-idx">2</span> <strong>Jury's Special Prize</strong>, Ignite Your Ambition (2022) "Beatim Project"</div>
+
+        <h2 class="section-title"><i data-lucide="file-text"></i> Selected Conferences</h2>
+        <div class="list-item"><span class="item-idx">3</span> Ryota NITTO et al., "Taste Perception Change...", VRSJ (2022)</div>
+        <div class="list-item"><span class="item-idx">4</span> Ryota NITTO et al., "Sweetness Perception Changes...", JASTS (2023)</div>
+        <div class="list-item"><span class="item-idx">5</span> Shin'ichi KOMIYA, Ryota NITTO et al., "Thermal Stimulation...", SICE (2023)</div>
+
+        <h2 class="section-title"><i data-lucide="briefcase"></i> Work Experience</h2>
+        <div class="list-item"><strong>Research Assistant</strong>, The University of Tokyo (2024 - Current)</div>
+        <div class="list-item"><strong>Part-time Instructor</strong>, Nihon Nyushi Center (2020 - Current)</div>
+        <div class="list-item"><strong>New Business Planner (Intern)</strong>, Sony Group Corp. (2022)</div>
+
+    </main>
+</div>
 
 <footer>
-    <p>© 2026 Ryota Nitto - Ph.D. Student at University of Tokyo</p>
+    <p>© 2026 Ryota NITTO - The University of Tokyo</p>
 </footer>
 
 <script>
-    // アイコン初期化
     try {
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
     } catch (e) {
-        console.error("Lucide failed:", e);
+        console.error("Lucide icons failed to load.");
     }
-
-    // スクロール時のふわっとした表示
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll(".reveal").forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(30px)";
-        observer.observe(el);
-    });
 </script>
 
 </body>
