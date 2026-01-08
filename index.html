@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | 日常を演奏する</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+    <title>Ryota Nitto | Portfolio</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
             --bg: #0a0a0c;
             --text: #e0e0e0;
-            --accent: #00f2ff; /* サイバー・アクア */
-            --sub-accent: #bc13fe; /* 身体拡張・パープル */
+            --accent: #00f2ff;
+            --sub-accent: #bc13fe;
             --card-bg: rgba(255, 255, 255, 0.05);
         }
 
@@ -19,150 +19,88 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.8;
             overflow-x: hidden;
         }
 
-        /* 背景のアニメーション（演奏の波形をイメージ） */
         .bg-wave {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
-            opacity: 0.2;
+            opacity: 0.15;
             background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);
         }
 
         header {
-            height: 100vh;
+            height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            border-bottom: 1px solid var(--card-bg);
         }
 
+        .profile-img {
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .my-name { font-size: 2rem; font-weight: 700; margin: 0; }
         .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+            font-size: 2.8rem; font-weight: 800;
             background: linear-gradient(90deg, var(--accent), var(--sub-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin: 15px 0;
+            line-height: 1.2;
         }
 
-        .hero-sub {
-            font-size: 1.2rem;
-            max-width: 700px;
-            letter-spacing: 0.1em;
-        }
+        section { max-width: 1000px; margin: 120px auto; padding: 0 25px; }
+        h2 { font-size: 1.8rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 0.1em; }
 
-        section {
-            max-width: 1000px;
-            margin: 100px auto;
-            padding: 0 20px;
-        }
+        /* CORE STRENGTHS (3 Pillars) */
+        .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .pillar-card { background: var(--card-bg); padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .pillar-tag { color: var(--accent); font-weight: bold; font-size: 0.8rem; margin-bottom: 10px; display: block; }
+        .pillar-card h3 { margin-top: 0; font-size: 1.4rem; }
 
-        h2 {
-            font-size: 2rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 15px;
-            margin-bottom: 40px;
-        }
-
-        /* 3つの柱のグリッド */
-        .pillar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .pillar-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .pillar-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-        }
-
-        .pillar-tag {
-            font-size: 0.8rem;
-            color: var(--accent);
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        /* プロジェクトセクション */
+        /* PROJECTS */
         .project-item {
             display: flex;
-            margin-bottom: 80px;
-            gap: 40px;
+            gap: 50px;
+            margin-bottom: 120px;
             align-items: flex-start;
         }
+        .project-img-box { flex: 1; min-width: 320px; }
+        .project-img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .project-info { flex: 1.4; }
 
-        .project-info { flex: 2; }
-        .project-meta {
-            flex: 1;
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 0.9rem;
+        .project-title { font-size: 2.4rem; margin: 0 0 10px 0; font-weight: 800; }
+        .tag { display: inline-block; background: rgba(0, 242, 255, 0.1); color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; margin: 0 8px 10px 0; font-weight: bold; }
+
+        .project-meta { background: var(--card-bg); padding: 20px; border-radius: 12px; margin-top: 25px; font-size: 0.9rem; }
+
+        .link-btn {
+            display: inline-flex; align-items: center; margin-top: 20px;
+            padding: 12px 28px; background: linear-gradient(45deg, var(--accent), var(--sub-accent));
+            color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 0.9rem; transition: transform 0.2s;
         }
+        .link-btn:hover { transform: scale(1.05); }
+        .link-btn i, .link-btn svg { margin-right: 8px; width: 18px; height: 18px; }
 
-        .project-title {
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
-            font-weight: 700;
-        }
+        /* アニメーション用設定 */
+        .reveal { opacity: 1; transform: translateY(0); transition: all 1s ease-out; }
 
-        .tag-row {
-            margin-bottom: 15px;
-        }
+        footer { text-align: center; padding: 100px 20px; color: #666; font-size: 0.9rem; border-top: 1px solid var(--card-bg); }
 
-        .tag {
-            display: inline-block;
-            background: rgba(0, 242, 255, 0.1);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 8px;
-        }
-
-        .status-badge {
-            font-size: 0.8rem;
-            color: #888;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        footer {
-            text-align: center;
-            padding: 100px 20px;
-            background: var(--card-bg);
-        }
-
-        /* スクロールアニメーション用 */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 768px) {
-            .project-item { flex-direction: column; }
-            .hero-title { font-size: 2.2rem; }
+        @media (max-width: 850px) {
+            .project-item { flex-direction: column; gap: 30px; }
+            .project-img-box { min-width: 100%; }
+            .hero-title { font-size: 2rem; }
         }
     </style>
 </head>
@@ -171,37 +109,37 @@
 <div class="bg-wave"></div>
 
 <header>
-    <div class="status-badge">Ph.D. Student / Interaction Designer</div>
+    <img src="images/face.jpeg" alt="Ryota Nitto" class="profile-img">
+    <div class="my-name">日塔 諒太 / Ryota Nitto</div>
+    <div style="color: var(--accent); margin-top: 5px; font-weight: bold; letter-spacing: 0.1em;">Ph.D. Student / Interaction Designer</div>
     <h1 class="hero-title">日常の構造をハックし、<br>能動的な「演奏」へと書き換える</h1>
-    <p class="hero-sub">
-        私は、静的で受動的な日常体験を、インタラクション技術によって「能動的な演奏体験」へと変容させることを信条としています。
-    </p>
+    <p style="opacity: 0.7;">東京大学 大学院新領域創成科学研究科 博士課程</p>
 </header>
 
 <section class="reveal">
     <h2>STATEMENT</h2>
-    <blockquote style="font-size: 1.25rem; border-left: 2px solid var(--sub-accent); padding-left: 20px; font-style: italic;">
-        「単なる利便性の追求ではなく、ユーザーが世界に対して主体的に関与できる『自己効力感』を設計する。」
-    </blockquote>
+    <p style="font-size: 1.3rem; font-style: italic; border-left: 4px solid var(--sub-accent); padding-left: 25px; color: #ccc;">
+        「単なる利便性の追求ではなく、日常の構造をハックし、ユーザーが世界に対して主体的に関与できる『自己効力感』を設計する。」
+    </p>
 </section>
 
 <section id="pillars" class="reveal">
     <h2>CORE STRENGTHS</h2>
     <div class="pillar-grid">
         <div class="pillar-card">
-            <span class="pillar-tag">01. Research</span>
-            <h3>生理的メカニズムへの介入</h3>
-            <p>味覚の「馴化」を制御するDynaDrinkの開発。コクとキレの両立を科学的に証明し、飲料を動的メディアへと再定義。</p>
+            <span class="pillar-tag">01. RESEARCH</span>
+            <h3>味覚の動態設計</h3>
+            <p>飲料における「馴化」を制御するDynaDrinkを開発。物質を動的メディアへと再定義し、生理的な飽きをハックします。</p>
         </div>
         <div class="pillar-card">
-            <span class="pillar-tag">02. Development</span>
+            <span class="pillar-tag">02. DEVELOPMENT</span>
             <h3>体験の実装力</h3>
-            <p>抽象概念を身体的没入へと翻訳。歩行を奏でる「Beatim」や、身体感覚を融解させる「わたぱ」など、独自のデバイスをフルスクラッチで実装。</p>
+            <p>抽象概念を独自のデバイスで「誰もが体験可能な現実」へ翻訳。歩行を奏でる等の未知の身体感覚を物理実装します。</p>
         </div>
         <div class="pillar-card">
-            <span class="pillar-tag">03. Management</span>
-            <h3>既存システムの再定義</h3>
-            <p>「プラレーラーズ」を通じたチームビルディング。既製品のルールを「乗っ取り」、新しい論理体系を構築するリーダーシップ。</p>
+            <span class="pillar-tag">03. MANAGEMENT</span>
+            <h3>システムの再定義</h3>
+            <p>既製品のルールをハックし、新しい論理体系を構築。多様な専門性を統合し、大規模な世界観を具現化します。</p>
         </div>
     </div>
 </section>
@@ -210,89 +148,109 @@
     <h2>SELECTED PROJECTS</h2>
 
     <div class="project-item reveal">
+        <div class="project-img-box"><img src="images/DynaDrink.png" class="project-img" alt="DynaDrink"></div>
         <div class="project-info">
-            <span class="status-badge">Journal: Frontiers in Nutrition / ISOT / VR学会</span>
             <h3 class="project-title">DynaDrink</h3>
-            <div class="tag-row">
-                <span class="tag">Taste Interaction</span><span class="tag">Physiology</span><span class="tag">Fluidics</span>
+            <div class="tag">Taste Interaction</div><div class="tag">Physiology</div>
+            <p>液体という静的な物質に「時間」という変数を組み込み、生理的な飽きを人工的な変化によって打ち消し続ける。本来トレードオフにある「コク」と「キレ」の両立を科学的に証明しました。</p>
+            <div class="project-meta">
+                <strong>Journal/Conference:</strong> Frontiers in Nutrition / ISOT / VR学会<br>
+                <strong>Motivation:</strong> 甘い飲料への愛と、健康維持の両立を目指した「美味しさの持続」。
             </div>
-            <p>液体という静的な物質に「時間」という変数を組み込み、生理的な飽きを人工的な動的変化によって打ち消し続ける**「味覚の動態設計」**。飲み過ぎという健康課題に対し、満足感の持続というアプローチで解決を試みました。</p>
-        </div>
-        <div class="project-meta">
-            <strong>Motivations:</strong><br>甘いものへの愛と、健康被害への危機意識の止揚。
+            <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1561107/full" target="_blank" class="link-btn">
+                <i data-lucide="file-text"></i> 論文を読む
+            </a>
         </div>
     </div>
 
     <div class="project-item reveal">
+        <div class="project-img-box"><img src="images/beatim.png" class="project-img" alt="Beatim"></div>
         <div class="project-info">
-            <span class="status-badge">Conf: Augmented Humans / Award: Ignite Your Ambition 2022</span>
             <h3 class="project-title">Beatim</h3>
-            <div class="tag-row">
-                <span class="tag">Mobile App</span><span class="tag">Sonic Interaction</span><span class="tag">Body Extension</span>
+            <div class="tag">Sonic Interaction</div><div class="tag">Mobile App</div>
+            <p>無意識の「歩行」を能動的な「演奏」へと書き換える。歩行の衝撃をリアルタイムで音楽に昇華させ、身体への支配感と没入感を極大化。株式会社Beatimとして社会実装を展開中。</p>
+            <div class="project-meta">
+                <strong>Award:</strong> Ignite Your Ambition 2022 審査員特別賞<br>
+                <strong>Motivation:</strong> 音楽と歩行が一致する圧倒的な「快感」を社会に広めたかった。
             </div>
-            <p>無意識の「歩行」を、能動的な「演奏」へと書き換える。自分の身体に対する支配感と没入感を極大化させる。株式会社Beatimを設立し、社会実装への道筋を構築。</p>
-        </div>
-        <div class="project-meta">
-            <strong>Motivations:</strong><br>音楽と歩行が完全一致する「快感」の追求と普及。
+            <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="link-btn">
+                <i data-lucide="smartphone"></i> App Store
+            </a>
         </div>
     </div>
 
     <div class="project-item reveal">
+        <div class="project-img-box"><img src="images/plarailers.jpg" class="project-img" alt="Plarailers"></div>
         <div class="project-info">
-            <span class="status-badge">Exhibition: Maker Faire Tokyo / 五月祭 / 駒場祭</span>
             <h3 class="project-title">プラレーラーズ</h3>
-            <div class="tag-row">
-                <span class="tag">IoT</span><span class="tag">Reverse Engineering</span><span class="tag">System Design</span>
+            <div class="tag">IoT</div><div class="tag">System Design</div>
+            <p>走るだけのプラレールに独自の論理体系を構築する。既製品の遊び方をハックし、物理的なモノの背後に高度な鉄道運行システムを実現。技術をチームで拡張した実践例です。</p>
+            <div class="project-meta">
+                <strong>Exhibition:</strong> Maker Faire Tokyo / 五月祭 / 駒場祭<br>
+                <strong>Motivation:</strong> 幼少期からのプラレール愛を、大学で培ったエンジニアリングで具現化。
             </div>
-            <p>既定の遊び方をハックし、物理的なモノの背後に自分だけの論理体系を構築。個人の技術をチームで拡張し、巨大な運行システムへと結実させました。</p>
-        </div>
-        <div class="project-meta">
-            <strong>Motivations:</strong><br>幼少期からの熱狂を、最新技術で「大人のシステム」へ。
+            <a href="https://plarailers.com/" target="_blank" class="link-btn">
+                <i data-lucide="external-link"></i> プロジェクトHP
+            </a>
         </div>
     </div>
 
     <div class="project-item reveal">
+        <div class="project-img-box"><img src="images/watapa.jpeg" class="project-img" alt="Watapa"></div>
         <div class="project-info">
-            <span class="status-badge">Expo 2025 Osaka: サントリー・ダイキン「水空」</span>
-            <h3 class="project-title">空気清浄感を高める食事体験</h3>
-            <div class="tag-row">
-                <span class="tag">VR</span><span class="tag">Cross-modal</span><span class="tag">Experimental Design</span>
-            </div>
-            <p>登山の原体験から、空気の心地よさを設計。VRを用いた実証実験を経て、実際のパビリオン設計へと還元。</p>
+            <h3 class="project-title">わたぱ</h3>
+            <div class="tag">Body Extension</div><div class="tag">HCI</div>
+            <p>「自分がわたあめになって食べられる」という形而上概念を物理実装。身体感覚の融解を狙った体験設計であり、狂気的なアイデアを現実へ着地させる「実装力」の象徴です。</p>
         </div>
-        <div class="project-meta">
-            <strong>Motivations:</strong><br>自然の心地よさを科学的に定義し、都市に再実装する。
+    </div>
+
+    <div class="project-item reveal">
+        <div class="project-img-box"><img src="images/suikuu.jpeg" class="project-img" alt="Osaka Expo"></div>
+        <div class="project-info">
+            <h3 class="project-title">大阪万博「水空」食事体験設計</h3>
+            <div class="tag">Expo 2025 Osaka</div><div class="tag">VR Evaluation</div>
+            <p>サントリー・ダイキン共同パビリオンにて、空気清浄感を高める食事体験を設計。VRを用いた実証実験を行い、その知見が実際のパビリオン設計へと還元されました。</p>
         </div>
     </div>
 </section>
 
 <section class="reveal" style="text-align: center;">
     <h2>VISION</h2>
-    <p style="font-size: 1.4rem;">
+    <p style="font-size: 1.5rem; font-weight: 700;">
         世界がまだ満足してしまっている「当たり前の日常」を、<br>
         驚きと没入に満ちた「能動的な舞台」へとアップデートする。
     </p>
 </section>
 
 <footer>
-    <p>© 2026 Your Name - Ph.D. Student at U-Tokyo</p>
-    <p style="font-size: 0.8rem; color: #666;">Built with Passion for HCI & Engineering</p>
+    <p>© 2026 Ryota Nitto - Ph.D. Student at University of Tokyo</p>
 </footer>
 
 <script>
-    // スクロール時のフェードイン演出
-    const reveals = document.querySelectorAll(".reveal");
-    const revealOnScroll = () => {
-        reveals.forEach(el => {
-            const windowHeight = window.innerHeight;
-            const elementTop = el.getBoundingClientRect().top;
-            if (elementTop < windowHeight - 100) {
-                el.classList.add("active");
+    // アイコン初期化
+    try {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    } catch (e) {
+        console.error("Lucide failed:", e);
+    }
+
+    // スクロール時のふわっとした表示
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
             }
         });
-    };
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // 初期表示用
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".reveal").forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        observer.observe(el);
+    });
 </script>
 
 </body>
