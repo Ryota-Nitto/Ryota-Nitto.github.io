@@ -138,6 +138,20 @@
             color: var(--text);
         }
 
+        /* iOSなどの自動リンクに対するスタイル上書き */
+        .contact-info a, 
+        .contact-info span {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* 特定の属性を持つリンク（Safariが生成するもの）をターゲットにする */
+        a[href^="tel"], 
+        a[href^="mailto"] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
         /* メインコンテンツ */
         .main-content {
             background-color: var(--bg);
@@ -428,9 +442,17 @@
         
         <div class="contact-info">
             <div><i data-lucide="building"></i><span lang="ja">東京大学 大学院新領域創成科学研究科<br>人間環境学専攻 人間環境情報学分野<br>割澤・福井・米谷・伴研究室</span><span lang="en">Human and Environment Informatics Laboratory, The University of Tokyo</span></div>
-            <div><i data-lucide="map-pin"></i><span lang="ja">277-0882 柏市柏の葉5-1-5 環境棟304</span><span lang="en">277-0882 #304 Environmental Studies, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan</span></div>
+            <div>
+                <i data-lucide="map-pin"></i>
+                <span lang="ja">277-0882 柏市柏の葉5-1-5 環境棟304</span>
+                <span lang="en">277-0882 #304 Environmental Studies, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan</span>
+            </div>
             <div><i data-lucide="mail"></i>nittoryota@lelab.t.u-tokyo.ac.jp</div>
-            <div><i data-lucide="phone"></i><span lang="ja">080-3431-4708</span><span lang="en">+81 80-3431-4708</span></div>
+            <div>
+                <i data-lucide="phone"></i>
+                <span lang="ja">080-3431-4708</span>
+                <span lang="en">+81 80-3431-4708</span>
+            </div>
         </div>
 
 
