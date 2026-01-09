@@ -222,6 +222,31 @@
         .project-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .project-title { font-size: 1.2rem; margin: 0 0 10px 0; color: #fff; }
         .tag { font-size: 0.7rem; background: rgba(0, 242, 255, 0.1); color: var(--accent); padding: 2px 8px; border-radius: 4px; margin-right: 5px; font-weight: bold; }
+        /* 受賞タグのスタイリング */
+        .tag-award {
+            display: inline-block;
+            padding: 2px 10px;
+            margin-left: 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #ffffff;
+            /* アクセントカラーを活かしたグラデーション */
+            background: linear-gradient(135deg, var(--sub-accent) 0%, var(--accent) 100%);
+            border-radius: 4px;
+            /* 視覚的に浮かび上がらせるグロー効果 */
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+            vertical-align: middle;
+            /* 文字が潰れないように調整 */
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        /* ホバー時に少し光を強める（オプション） */
+        .tag-award:hover {
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.5);
+            transform: translateY(-1px);
+            transition: all 0.2s ease;
+        }
         
         .btn {
             text-decoration: none; font-size: 0.7rem; font-weight: bold; color: #fff;
@@ -364,7 +389,7 @@
         <div class="grid">
             <div class="card">
                 <h4>Human-Food Interaction (HFI)</h4>
-                <p>機械的介入による新しい味覚体験の創出。味覚刺激の時系列変化を利用し、糖分や温度を変えずに知覚を強化するデバイスを開発し、食体験を再定義します。</p>
+                <p>機械的介入による新しい味覚体験の創出。食事中の五感刺激をハックし、食体験を再定義します。</p>
             </div>
             <div class="card">
                 <h4>Experience Engineering</h4>
@@ -419,19 +444,220 @@
             </div>
         </div>
 
-        <h2 class="section-title"><i data-lucide="award"></i> Awards</h2>
-        <div class="list-item"><span class="item-idx">1</span> <strong>Best Presentation Award</strong>, 24th SICE (2023) "Thermal Stimulation..."</div>
-        <div class="list-item"><span class="item-idx">2</span> <strong>Jury's Special Prize</strong>, Ignite Your Ambition (2022) "Beatim Project"</div>
+        <h2 class="section-title"><i data-lucide="file-text"></i> Research Publications</h2>
 
-        <h2 class="section-title"><i data-lucide="file-text"></i> Selected Conferences</h2>
-        <div class="list-item"><span class="item-idx">3</span> Ryota NITTO et al., VRSJ (2022)</div>
-        <div class="list-item"><span class="item-idx">4</span> Ryota NITTO et al., JASTS (2023)</div>
-        <div class="list-item"><span class="item-idx">5</span> Shin'ichi KOMIYA, Ryota NITTO et al., SICE (2023)</div>
+        <h3 class="sub-section-title">Journal Articles （査読付き論文誌）</h3>
+        <div class="list-item publication">
+            <span class="item-idx">J1</span>
+            <div>
+                <strong>Ryota Nitto</strong>, Yuki Ban, Rui Fukui, Shin'ichi Warisawa: 
+                "Gradual increases in sugar concentration enhance total perceived sweetness in individuals prone to sweetness habituation", 
+                <em>Frontiers in Psychology</em>, Vol. 16, 1561107, 2025. 
+                <a href="https://doi.org/10.3389/fpsyg.2025.1561107" target="_blank" class="text-link">[DOI]</a>
+            </div>
+        </div>
+
+        <h3 class="sub-section-title">International Conferences （国際会議・査読付き）</h3>
+        <!-- <div class="list-item publication">
+            <span class="item-idx">C4</span>
+            <div>
+                Chijing Wang, <strong>Ryota Nitto</strong>, Takuo Kuroki, Yuki Ban, Miki Nakai, Jun'ichi Shimizu, Tomoyoshi Ashikaga and Shin'ichi Warisawa: 
+                "Differential Contributions of Physiological Features Across Early, Mid, and Late Sleep Phases to Next Morning Cognitive Performance", 
+                <em>BIOSIGNALS 2026</em>, March 2026.
+            </div>
+        </div> -->
+        <div class="list-item publication">
+            <span class="item-idx">C4</span>
+            <div>
+                Chijing Wang, <strong>Ryota Nitto</strong>, Takuo Kuroki, Yuki Ban, Miki Nakai, Jun'ichi Shimizu, Tomoyoshi Ashikaga and Shin'ichi Warisawa: 
+                "Estimating Daytime Productivity from Sleep-Time Biosignals with a Reduced Feature Set", 
+                <em>World Sleep 2025</em>, September 2025. <span class="tag-award">Young Investigator Award</span>
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">C3</span>
+            <div>
+                Chijing Wang, <strong>Ryota Nitto</strong>, Takuo Kuroki, Yuki Ban, Miki Nakai, Jun'ichi Shimizu, Tomoyoshi Ashikaga and Shin'ichi Warisawa: 
+                "Constructing a Transformer-based Model to Infer Daytime Productivity from Biometric Information During Sleep", 
+                <em>6th International Conference on Human Systems Engineering and Design (IHSED 2024)</em>, September 2024.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">C2</span>
+            <div>
+                Shin'ichi Komiya, <strong>Ryota Nitto</strong>, Yuki Ban and Shin'ichi Warisawa: 
+                "Enhancing Food Coldness Perception via Synchronous Posterior Neck Cold stimulus during Swallowing", 
+                <em>ACM Symposium on Applied Perception (SAP 2024)</em>, August 2024.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">C1</span>
+            <div>
+                <strong>Ryota Nitto</strong>, Yuki Ban, Rui Fukui and Shin'ichi Warisawa: 
+                "Improvement of sweetness perception through gradual increase in sugar content during the eating process.", 
+                <em>19th International Symposium on Olfaction and Taste (ISOT 2024)</em>, June 2024.
+            </div>
+        </div>
+
+        <h3 class="sub-section-title">Domestic Conferences （国内会議）</h3>
+        <div class="list-item publication">
+            <span class="item-idx">D11</span>
+            <div>
+                川田 健仁, 小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
+                "食品ごとに異なる良好な飲食体験の環境的文脈を再現した 多感覚刺激提示によるおいしさ向上", 
+                ヒューマンインタフェースシンポジウム（HI 2025）, 2025年9月. <span class="tag-award">ショートビデオ優秀賞</span>
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D10</span>
+            <div>
+                小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
+                "咀嚼・嚥下中の食品温感変化を再現した頸部への温度刺激提示による食品温感増強", 
+                ヒューマンインタフェースシンポジウム (HI 2025), 2025年9月. <span class="tag-award">ショートビデオ優秀賞</span>
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D9</span>
+            <div>
+                <strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一: 
+                "摂食行動に応じた環境の視聴覚刺激の低減による風味知覚の向上", 
+                第30回日本バーチャルリアリティ学会大会 (VRSJ 2025), 2025年9月.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D8</span>
+            <div>
+                王 馳景, <strong>日塔 諒太</strong>, 伴 祐樹, 中井 美希, 清水 淳一, 今井 洋輔, 割澤 伸一: 
+                "8時間睡眠条件下におけるコルチゾール分泌と睡眠の質の関係性", 
+                日本睡眠学会第49回定期学術集会, 2025年6月.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D7</span>
+            <div>
+                王 馳景, 中井 美希, <strong>日塔 諒太</strong>, 伴 祐樹, 清水 淳一, 今井 洋輔, 割澤 伸一: 
+                "人間のサーカディアンリズムに沿った空調制御が睡眠の質と翌日の認知機能に与える影響", 
+                日本睡眠学会第49回定期学術集会, 2025年6月.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D6</span>
+            <div>
+                小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
+                "摂食に同期した後頸部への冷感刺激による食品冷感の増強", 
+                ヒューマンインタフェース学会 (HI 2024), 2024年9月. <span class="tag-award">優秀プレゼンテーション賞</span><span class="tag-award">ショートビデオ優秀賞</span>
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D5</span>
+            <div>
+                <strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一: 
+                "咀嚼・嚥下中の視聴覚ノイズの遮断による風味と食感の向上", 
+                第29回 日本バーチャルリアリティ学会大会 (VRSJ 2024), 2024年9月.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D4</span>
+            <div>
+                王 馳景, <strong>日塔 諒太</strong>, 黒木 琢央, 伴 祐樹, 中井 美希, 清水 淳一, 足利 朋義, 割澤 伸一: 
+                "睡眠時生体情報から日中生産性を推測するTransformerベースモデルの構築", 
+                情報処理学会 第86回全国大会, 5X-04, 2024年3月.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D3</span>
+            <div>
+                小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
+                "嚥下と同期した頸部への温度提示による食品の温冷感増強手法の検討", 
+                第24回計測自動制御学会システムインテグレーション部門講演会 (SI2023), 2D2-07, 2023年12月. <span class="tag-award">優秀講演賞</span>
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D2</span>
+            <div>
+                <strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一: 
+                "味覚刺激の時系列変化パターンが甘味強度知覚に与える影響の検討", 
+                日本味と匂学会 第57回大会 (JASTS 2023), 2023年9月.
+            </div>
+        </div>
+        <div class="list-item publication">
+            <span class="item-idx">D1</span>
+            <div>
+                <strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一: 
+                "飲料飲用の過程に応じた糖度制御による味知覚変化", 
+                第27回日本バーチャルリアリティ学会大会 (VRSJ 2022), 1A2-4, 2022年9月.
+            </div>
+        </div>
+
+        <h2 class="section-title"><i data-lucide="compass"></i> Other Activities</h2>
+
+        <div class="list-item">
+            <span class="item-idx">O3</span>
+            <div>
+                <strong>大阪・関西万博 サントリー・ダイキン 高原レストラン「水空」</strong>, 開発協力<br>
+                <span class="activity-desc">サントリー・ダイキンによるレストランにおいて、空気清浄感を提示するクロスモーダルコンテンツの設計・実装支援。 (2024年 - 2025年)</span>
+            </div>
+        </div>
+
+        <div class="list-item">
+            <span class="item-idx">O2</span>
+            <div>
+                <strong>Ignite Your Ambition (ソニー東大藝大社会連携講座)</strong>, Beatim PJ プロジェクトリーダー<br>
+                <span class="activity-desc">歩行運動を音楽演奏へと昇華させる「Beatim」の社会実装に向けた活動において、自らのアイデアを元にチームを立ち上げ、開発・検証まで行い、ピッチコンテストにて発表。 (2021年 - 2022年)</span>  <span class="tag-award">審査員特別賞（2位）</span>
+            </div>
+        </div>
+
+        <div class="list-item">
+            <span class="item-idx">O1</span>
+            <div>
+                <strong>プラレーラーズ (Plarailers)</strong>, 主宰・システム開発<br>
+                <span class="activity-desc">鉄道玩具を電子改造し、自律走行や高度な運行管理を実現するシステムの構築。チームの立ち上げからハードウェア開発、チーム運営に従事。 (2019年 - 現在)</span>
+            </div>
+        </div>
+
+        <h2 class="section-title"><i data-lucide="graduation-cap"></i> Fellowship</h2>
+
+        <div class="list-item">
+            <span class="item-idx">F1</span>
+            <div>
+                <strong>JST 次世代研究者挑戦的研究プログラム (SPRING) GXプロジェクト フェロー</strong><br>
+                2024年4月 - 現在
+            </div>
+        </div>
 
         <h2 class="section-title"><i data-lucide="briefcase"></i> Work Experience</h2>
-        <div class="list-item"><strong>Research Assistant</strong>, The University of Tokyo (2024 - Current)</div>
-        <div class="list-item"><strong>Part-time Instructor</strong>, Nihon Nyushi Center (2020 - Current)</div>
-        <div class="list-item"><strong>New Business Planner (Intern)</strong>, Sony Group Corp. (2022)</div>
+
+        <div class="list-item">
+            <span class="item-idx">W4</span>
+            <div>
+                <strong>リサーチ・アシスタント (RA)</strong>, 東京大学 大学院新領域創成科学研究科<br>
+                2024年4月 - 現在
+            </div>
+        </div>
+
+        <div class="list-item">
+            <span class="item-idx">W3</span>
+            <div>
+                <strong>Sony Startup Pitch Contest（新規事業開発インターンシップ）</strong>, ソニーグループ株式会社<br>
+                2022年8月 - 2022年9月 (2ヶ月)
+            </div>
+        </div>
+
+        <div class="list-item">
+            <span class="item-idx">W2</span>
+            <div>
+                <strong>非常勤講師（数学）</strong>, SAPIX 中学部<br>
+                2020年4月 - 現在
+            </div>
+        </div>
+
+        <div class="list-item">
+            <span class="item-idx">W1</span>
+            <div>
+                <strong>非常勤講師</strong>, 個別指導プラスジム<br>
+                2018年7月 - 2022年3月
+            </div>
+        </div>
     </main>
 </div>
 
