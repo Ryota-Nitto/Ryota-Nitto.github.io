@@ -82,22 +82,22 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .profile-img {
-            width: 120px; height: 120px;
-            border-radius: 15px;
+            width: 160px; height: 160px;
+            border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--accent);
-            margin-bottom: 20px;
+            border: 3px solid var(--accent);
+            margin-bottom: 25px;
         }
 
         /* 名前セクションの整列 */
         .name, .name-sub, .job-title {
             margin-left: 0 !important;
             padding-left: 0 !important;
-            text-align: left;
+            text-align: center;
             width: 100%;
         }
 
@@ -115,7 +115,11 @@
         .job-title { font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px; white-space: nowrap; }
 
         /* 連絡先情報の整列 */
-        .contact-info { font-size: 0.8rem; margin-bottom: 40px; line-height: 1.8; }
+        .contact-info { 
+            font-size: 0.8rem; 
+            margin-bottom: 40px; 
+            line-height: 1.8; 
+        }
         .contact-info div {
             display: flex;
             align-items: center;
@@ -220,6 +224,31 @@
             margin: 35px 0 15px 0; text-transform: uppercase;
             letter-spacing: 0.1em; border-bottom: 1px solid var(--border);
             display: inline-block;
+        }
+
+        /* 関心分野 */
+        .interests-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .interest-tag {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--accent);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .interest-tag:hover {
+            border-color: var(--accent);
+            background: rgba(0, 242, 255, 0.05);
+            transform: translateY(-2px);
         }
 
         /* リストアイテム (Publications, Education, etc.) */
@@ -456,20 +485,30 @@
             <span lang="en">Ryota NITTO</span>
         </h1>
         <div class="name-sub" lang="ja">Ryota NITTO</div>
+        <div class="name-sub" lang="en">日塔 諒太</div>
 
         <div class="job-title">
-            <span lang="ja">博士後期課程 / インタラクションデザイナー</span>
-            <span lang="en">Ph.D Student / Interaction Designer</span>
+            <span lang="ja">インタラクションデザイナー</span>
+            <span lang="en">Interaction Designer</span>
         </div>
         
         <div class="contact-info">
-            <div><i data-lucide="building"></i><span lang="ja">東京大学 大学院新領域創成科学研究科<br>人間環境学専攻 人間環境情報学分野<br>割澤・福井・米谷・伴研究室</span><span lang="en">Human and Environment Informatics Laboratory, The University of Tokyo</span></div>
+            <div>
+                <i data-lucide="building"></i>
+                <span lang="ja">東京大学 大学院新領域創成科学研究科<br>人間環境学専攻 人間環境情報学分野<br>割澤・福井・米谷・伴研究室</span>
+                <span lang="en">Human and Environment Informatics Lab.,<br>The University of Tokyo</span>
+            </div>
+            <div>
+                <i data-lucide="user-round"></i>
+                <span lang="ja">博士後期課程 / プログラム・フェロー</span>
+                <span lang="en">Ph.D Student / Program Fellow</span>
+            </div>
             <div>
                 <i data-lucide="map-pin"></i>
                 <span lang="ja">277-0882 柏市柏の葉5-1-5 環境棟304</span>
                 <span lang="en">277-0882 #304 Environmental Studies, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan</span>
             </div>
-            <div><i data-lucide="mail"></i>nittoryota@lelab.t.u-tokyo.ac.jp</div>
+            <div><i data-lucide="mail"></i>nittoryota [at] lelab.t.u-tokyo.ac.jp</div>
             <div>
                 <i data-lucide="phone"></i>
                 <span lang="ja">080-3431-4708</span>
@@ -501,67 +540,68 @@
             </p>
         </div>
 
-        <h2 class="section-title"><i data-lucide="brain"></i> Research Interests</h2>
-        <div class="grid">
-            <div class="card">
-                <h4>Human-Food Interaction (HFI)</h4>
-                <p>機械的介入による新しい味覚体験の創出。食事中の五感刺激をハックし、食体験を再定義します。</p>
-            </div>
-            <div class="card">
-                <h4>Experience Engineering</h4>
-                <p>機械・電子・情報工学を統合し、「自分を食べる」「歩行を奏でる」といった言語化困難な抽象概念を、独自のシステムによって誰もが体験可能な現実へと翻訳します。</p>
-            </div>
-        </div>
-
         <h2 class="section-title"><i data-lucide="layout"></i> Creative Projects</h2>
         <div class="grid">
+
             <div class="project-card">
                 <img src="images/DynaDrink.png" class="card-img" alt="DynaDrink">
                 <div class="project-body">
                     <h3 class="project-title">DynaDrink</h3>
-                    <div class="tags">
-                        <span class="tag">Taste Interaction</span>
-                    </div>
-                    <p class="card-text">
-                        飲用の過程に応じた時系列的な糖度制御により、糖分量を変えずに甘味を強化する。
-                    </p>
+                    <div class="tags"><span class="tag">Human-Food Interaction</span></div>
+                    <p class="card-text">飲んでいる途中に濃度を変え、甘さの錯覚や不可能な飲料体験を生み出す。</p>
                     <a href="https://doi.org/10.3389/fpsyg.2025.1561107" target="_blank" class="btn">
                         <i data-lucide="file-text"></i> Paper
                     </a>
                 </div>
             </div>
+
             <div class="project-card">
                 <img src="images/beatim.png" class="card-img">
                 <div class="project-body">
                     <h3 class="project-title">Beatim</h3>
                     <div style="margin-bottom:10px;"><span class="tag">Sonic Interaction</span></div>
-                    <p class="card-text">歩行と音楽を統合し、身体運動を演奏へと昇華させる。</p>
-                    <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn"><i data-lucide="link"></i> App Store</a>
+                    <p class="card-text">音楽の中でドラムを叩くように歩き、身体運動を演奏へと昇華させる。</p>
+                    <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn">
+                        <i data-lucide="link"></i> App Store
+                    </a>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="images/plarailers.jpg" class="card-img">
-                <div class="project-body">
-                    <h3 class="project-title">Plarailers</h3>
-                    <div style="margin-bottom:10px;"><span class="tag">IoT / System Hack</span></div>
-                    <p class="card-text">鉄道玩具を電子改造し、高度な鉄道運行システムを構築。</p>
-                    <a href="https://plarailers.com" target="_blank" class="btn"><i data-lucide="link"></i> Website</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="images/watapa.jpeg" class="card-img">
-                <div class="project-body">
-                    <h3 class="project-title">わたぱ！</h3>
-                    <div style="margin-bottom:10px;"><span class="tag">Body Extension</span></div>
-                    <p class="card-text">巨大わたあめ機に入って「自分を食べる」という全く新しい体験設計。</p>
-                </div>
-            </div>
+            
+            
             <div class="project-card">
                 <img src="images/suikuu.jpeg" class="card-img">
                 <div class="project-body">
                     <h3 class="project-title">大阪万博「水空」</h3>
-                    <div style="margin-bottom:10px;"><span class="tag">VR / Cross-modal</span></div>
-                    <p class="card-text">空気清浄感を高める食事体験。パビリオンの設計に活用。</p>
+                    <div style="margin-bottom:10px;">
+                        <span class="tag">VR</span>
+                        <span class="tag">Cross-modal</span>
+                    </div>
+                    <p class="card-text">映像と音声と気流のクロスモーダルな体験で空気清浄感を高める食事体験。</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/watapa.jpeg" class="card-img">
+                <div class="project-body">
+                    <h3 class="project-title">わたぱ！</h3>
+                    <div style="margin-bottom:10px;">
+                        <span class="tag">Human-Food Interaction</span>
+                        <span class="tag">Body Extension</span>
+                    </div>
+                    <p class="card-text">巨大わたあめ機に入って「自分を食べる」という全く新しい体験設計。</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/plarailers.jpg" class="card-img">
+                <div class="project-body">
+                    <h3 class="project-title">Plarailers</h3>
+                    <div style="margin-bottom:10px;">
+                        <span class="tag">IoT</span>
+                        <span class="tag">System Hack</span>
+                    </div>
+                    <p class="card-text">鉄道玩具を電子改造し、高度な鉄道運行システムを構築。</p>
+                    <a href="https://plarailers.com" target="_blank" class="btn"><i data-lucide="link"></i> Website</a>
                 </div>
             </div>
         </div>
@@ -845,6 +885,14 @@
             </div>
         </div>
 
+        <div class="list-item">
+            <span class="item-idx">2015 - 2018</span>
+            <div>
+                <strong>東京都立武蔵高等学校</strong><br>
+                <span class="activity-desc">卒業</span>
+            </div>
+        </div>
+
         <h2 class="section-title"><i data-lucide="wrench"></i> Skills</h2>
 
         <div class="list-item">
@@ -898,7 +946,7 @@
         <div class="list-item">
             <span class="item-idx">W3</span>
             <div>
-                <strong>Sony Startup Pitch Contest（新規事業開発インターンシップ）</strong>, ソニーグループ株式会社<br>
+                <strong>新規事業開発インターンシップ</strong>, ソニーグループ株式会社 Sony Startup Pitch Contest<br>
                 2022年8月 - 2022年9月 (2ヶ月)
             </div>
         </div>
@@ -906,7 +954,7 @@
         <div class="list-item">
             <span class="item-idx">W2</span>
             <div>
-                <strong>非常勤講師（数学）</strong>, SAPIX 中学部<br>
+                <strong>非常勤講師</strong>, SAPIX 中学部 数学科<br>
                 2020年4月 - 現在
             </div>
         </div>
