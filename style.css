@@ -95,15 +95,18 @@ body.lang-en div[lang="en"], body.lang-en p[lang="en"], body.lang-en h1[lang="en
 }
 .contact-info svg { width: 14px; height: 14px; margin-right: 10px; color: var(--accent); flex-shrink: 0; }
 
-.contact-info a.lab-link {
-    color: inherit; /* 周囲のテキスト色（白・グレー）を継承 */
-    text-decoration: none;
-    transition: color 0.3s;
+/* サイドバー内のリンクのデフォルトスタイルをリセット */
+.contact-info a {
+    color: inherit !important; /* 親要素の文字色（白や薄いグレー）を引き継ぐ */
+    text-decoration: none !important; /* 下線を消す */
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
-.contact-info a.lab-link:hover {
-    color: var(--accent); /* ホバー時に水色にする */
-    text-decoration: underline; /* ホバー時に下線を表示 */
+/* マウスを乗せた時（ホバー時）の設定 */
+.contact-info a:hover {
+    color: var(--accent) !important; /* 水色に光らせる */
+    text-decoration: underline !important; /* ホバー時のみ下線を表示 */
+    opacity: 1; /* 透明度をリセットしてはっきり見せる */
 }
 
 /* メインコンテンツ */
