@@ -117,7 +117,7 @@
         /* 連絡先情報の整列 */
         .contact-info { 
             font-size: 0.8rem; 
-            margin-bottom: 40px; 
+            margin-bottom: 0px; 
             line-height: 1.8; 
         }
         .contact-info div {
@@ -346,6 +346,9 @@
 
         /* プロジェクトカード本体 */
         .project-card {
+            text-decoration: none; /* 下線を消す */
+            color: inherit;        /* 文字色を継承（白/グレーのままにする） */
+            position: relative;
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
@@ -353,6 +356,16 @@
             display: flex;
             flex-direction: column;
             transition: all 0.3s ease; /* ホバーアニメーションを滑らかに */
+        }
+
+        .project-card .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1; /* カード全体を覆う */
         }
 
         /* ホバーエフェクト：Research Interestsと統一 */
@@ -472,6 +485,7 @@
             .list-item .item-idx { width: auto; }
         }
     </style>
+
 </head>
 <body>
 
@@ -543,32 +557,29 @@
         <h2 class="section-title"><i data-lucide="layout"></i> Creative Projects</h2>
         <div class="grid">
 
-            <div class="project-card">
+            <a href="projects/dynadrink.html" class="project-card">
                 <img src="images/DynaDrink.png" class="card-img" alt="DynaDrink">
                 <div class="project-body">
                     <h3 class="project-title">DynaDrink</h3>
                     <div class="tags"><span class="tag">Human-Food Interaction</span></div>
                     <p class="card-text">飲んでいる途中に濃度を変え、甘さの錯覚や不可能な飲料体験を生み出す。</p>
-                    <a href="https://doi.org/10.3389/fpsyg.2025.1561107" target="_blank" class="btn">
-                        <i data-lucide="file-text"></i> Paper
-                    </a>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-card">
+            <a href="projects/beatim.html" class="project-card">
                 <img src="images/beatim.png" class="card-img">
                 <div class="project-body">
                     <h3 class="project-title">Beatim</h3>
                     <div style="margin-bottom:10px;"><span class="tag">Sonic Interaction</span></div>
                     <p class="card-text">音楽の中でドラムを叩くように歩き、身体運動を演奏へと昇華させる。</p>
-                    <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn">
+                    <!-- <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn">
                         <i data-lucide="link"></i> App Store
-                    </a>
+                    </a> -->
                 </div>
-            </div>
+            </a>
             
             
-            <div class="project-card">
+            <a href="projects/suikuu.html" class="project-card">
                 <img src="images/suikuu.jpeg" class="card-img">
                 <div class="project-body">
                     <h3 class="project-title">大阪万博「水空」</h3>
@@ -578,9 +589,9 @@
                     </div>
                     <p class="card-text">映像と音声と気流のクロスモーダルな体験で空気清浄感を高める食事体験。</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-card">
+            <a href="projects/watapa.html" class="project-card">
                 <img src="images/watapa.jpeg" class="card-img">
                 <div class="project-body">
                     <h3 class="project-title">わたぱ！</h3>
@@ -590,9 +601,9 @@
                     </div>
                     <p class="card-text">巨大わたあめ機に入って「自分を食べる」という全く新しい体験設計。</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-card">
+            <a href="projects/plarailers.html" class="project-card">
                 <img src="images/plarailers.jpg" class="card-img">
                 <div class="project-body">
                     <h3 class="project-title">Plarailers</h3>
@@ -601,10 +612,10 @@
                         <span class="tag">System Hack</span>
                     </div>
                     <p class="card-text">鉄道玩具を電子改造し、高度な鉄道運行システムを構築。</p>
-                    <a href="https://plarailers.com" target="_blank" class="btn"><i data-lucide="link"></i> Website</a>
+                    <!-- <a href="https://plarailers.com" target="_blank" class="btn"><i data-lucide="link"></i> Website</a> -->
                 </div>
             </div>
-        </div>
+        </a>
 
         <h2 class="section-title"><i data-lucide="file-text"></i> Research Publications</h2>
 
@@ -970,7 +981,7 @@
 </div>
 
 <footer>
-    <p>© 2026 Ryota NITTO - The University of Tokyo</p>
+    <p>© 2026 Ryota NITTO</p>
 </footer>
 
 <script>

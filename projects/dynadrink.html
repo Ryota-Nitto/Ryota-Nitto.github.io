@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Project Name | Ryota NITTO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --text: #e0e0e0;
+            --accent: #00f2ff;
+            --sub-accent: #bc13fe;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* 言語切り替え */
+        [lang="en"] { display: none; }
+        body.lang-en [lang="ja"] { display: none; }
+        body.lang-en [lang="en"] { display: block; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ナビゲーション（戻るボタン & 言語） */
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            opacity: 0.7;
+        }
+        .back-link:hover { opacity: 1; color: var(--accent); }
+
+        /* プロジェクト見出し */
+        .project-header {
+            margin-bottom: 40px;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            margin: 0 0 15px 0;
+            background: linear-gradient(90deg, #fff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tags { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tag {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* メインビジュアル（画像・動画） */
+        .hero-visual {
+            width: 100%;
+            /* aspect-ratio: 16 / 9; */
+            aspect-ratio: 4400 / 1902;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            margin-bottom: 50px;
+            overflow: hidden;
+        }
+        .hero-visual img, .hero-visual video {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+
+        /* コンテンツセクション */
+        section { margin-bottom: 60px; }
+        h2 {
+            font-size: 1.4rem;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .description { font-size: 1.05rem; opacity: 0.9; }
+
+        /* トップページ共通の論文リストスタイル */
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 0;
+            font-size: 0.85rem;
+            gap: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .list-item .item-idx {
+            width: 60px; /* 詳細ページ用に少し調整 */
+            flex-shrink: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .pub-link-block {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: color 0.2s ease;
+            line-height: 1.6;
+        }
+
+        .pub-link-block:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 3px;
+            color: #fff;
+        }
+
+        .pub-link-block strong {
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+
+        /* 言語スイッチ */
+        .lang-switch button {
+            background: none; border: none; color: var(--text); cursor: pointer; opacity: 0.4;
+        }
+        .lang-switch button.active { opacity: 1; color: var(--accent); font-weight: bold; }
+
+        @media (max-width: 600px) {
+            .project-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav class="nav-header">
+        <a href="../index.html" class="back-link">
+            <i data-lucide="arrow-left"></i> Back to Home
+        </a>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ja')" id="btn-ja" class="active">JP</button> /
+            <button onclick="setLanguage('en')" id="btn-en">EN</button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="tags">
+            <span class="tag">Human-Food Interaction</span>
+        </div>
+        <h1 class="project-title">DynaDrink</h1>
+        <p class="description">
+            <span lang="ja">飲んでいる最中に飲料の濃度を変化させることで、味覚の順応（慣れ）を抑制し、甘味の知覚を増強するインタラクティブ・システム。</span>
+            <span lang="en">An interactive system that enhances sweetness perception by dynamically changing beverage concentration during consumption to suppress taste adaptation.</span>
+        </p>
+    </header>
+
+    <div class="hero-visual">
+        <!-- <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/XXXXXXX" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allowfullscreen></iframe></div> -->
+        <img src="../images/DynaDrink.png" alt="DynaDrink Main Visual">
+    </div>
+
+    <section>
+        <h2><i data-lucide="lightbulb"></i> Concept</h2>
+        <div lang="ja">
+            <p>通常の飲料は味の強さが一定ですが、人間は飲み進めるうちに味に「慣れ」てしまいます。DynaDrinkは、この生理的な特性を逆手に取り、飲用プロセスに合わせて糖度を徐々に上げる制御を行うことで、最後まで「おいしい」と感じ続ける体験を設計しました。</p>
+        </div>
+        <div lang="en">
+            <p>While typical beverages have a constant intensity, humans tend to "adapt" to the taste. DynaDrink utilizes this physiological characteristic by controlling the sugar concentration to increase gradually during the drinking process, ensuring a sustained "delicious" experience.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="cpu"></i> Implementation</h2>
+        <div lang="ja">
+            <p>流量センサーと高精度なポンプを組み合わせ、濃度を動的に計算・混合するデバイスを開発しました。</p>
+        </div>
+        <div lang="en">
+            <p>We developed a device that combines flow sensors and high-precision pumps, using a microcontroller to dynamically calculate and mix the concentration the moment suction is detected.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="file-text"></i> Publication</h2>
+        
+        <div class="list-item publication">
+            <span class="item-idx">J1</span>
+            <div>
+                <a href="https://doi.org/10.3389/fpsyg.2025.1561107" target="_blank" class="pub-link-block">
+                    <strong>Ryota Nitto</strong>, Yuki Ban, Rui Fukui and Shin'ichi Warisawa: 
+                    "Gradual increases in sugar concentration enhance total perceived sweetness in individuals prone to sweetness habituation", 
+                    <em>Frontiers in Psychology</em>, Vol. 16, 1561107, 2025. 
+                </a>
+            </div>
+        </div>
+
+        <div class="list-item publication">
+            <span class="item-idx">C1</span>
+            <div>
+                <a href="https://www.ecro.online/meetings/paris-2026/meeting/" target="_blank" class="pub-link-block">
+                    <strong>Ryota Nitto</strong>, Yuki Ban, Rui Fukui and Shin'ichi Warisawa: 
+                    "Improvement of sweetness perception through gradual increase in sugar content during the eating process", 
+                    <em>19th International Symposium on Olfaction and Taste (ISOT 2024)</em>, June 2024.
+                </a>
+            </div>
+        </div>
+
+        <div class="list-item publication">
+            <span class="item-idx">D2</span>
+            <div>
+                <a href="https://www.knt.co.jp/ec/jasts57/index.html" target="_blank" class="pub-link-block">
+                    <strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一: 
+                    "味覚刺激の時系列変化パターンが甘味強度知覚に与える影響の検討", 
+                    日本味と匂学会 第57回大会 (JASTS 2023), 2023年9月.
+                </a>
+            </div>
+        </div>
+
+        <div class="list-item publication">
+            <span class="item-idx">D1</span>
+            <div>
+                <a href="https://conference.vrsj.org/ac2022/program/doc/3E4-5.pdf" target="_blank" class="pub-link-block">
+                    <strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一: 
+                    "飲料飲用の過程に応じた糖度制御による味知覚変化", 
+                    第27回日本バーチャルリアリティ学会大会 (VRSJ 2022), 1A2-4, 2022年9月.
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ryota NITTO</p>
+    </footer>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.body.classList.toggle('lang-en', lang === 'en');
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        localStorage.setItem('preferred-lang', lang);
+    }
+
+    // アイコンの初期化
+    lucide.createIcons();
+
+    // 保存された言語設定の反映
+    const savedLang = localStorage.getItem('preferred-lang') || 'ja';
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>
