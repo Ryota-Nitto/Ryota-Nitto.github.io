@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>わたぱ！ | Ryota NITTO</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="nav-header">
+        <a href="../index.html" class="back-link">
+            <i data-lucide="arrow-left"></i> Back to Home
+        </a>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ja')" id="btn-ja" class="active">JP</button> /
+            <button onclick="setLanguage('en')" id="btn-en">EN</button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="tags">
+            <span class="tag">Human-Food Interaction</span>
+            <span class="tag">Body Extension</span>
+        </div>
+        <h1 class="project-title">わたぱ！</h1>
+        <p class="description">
+            <span lang="ja">巨大わたあめ機に入って「自分を食べる」という、身体拡張と食を融合させた全く新しい体験設計。</span>
+            <span lang="en">A completely new experience design merging body extension and food, where participants enter a giant cotton candy machine and "eat themselves."</span>
+        </p>
+    </header>
+
+    <div class="hero-visual">
+        <img src="../images/watapa.jpeg" alt="Watapa Visual">
+    </div>
+
+    <section>
+        <h2><i data-lucide="lightbulb"></i> Concept</h2>
+        <div lang="ja">
+            <p>自分自身や友人を象徴するわたあめを作り、それを食べることで、自己や他者との境界を再認識するプロジェクトです。巨大なわたあめ機の中で、自分自身の分身が形作られていくプロセスを経て、最終的にそれを「食べる」という行為により、身体の拡張と消失を同時に体験する新しいコミュニケーションの形を提案しました。</p>
+        </div>
+        <div lang="en">
+            <p>This project allows participants to re-recognize the boundaries between themselves and others by creating and eating cotton candy that symbolizes themselves or their friends. Through the process of forming one's own alter ego inside a giant cotton candy machine and eventually "eating" it, we proposed a new form of communication that allows participants to simultaneously experience the extension and disappearance of the body.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="cpu"></i> Development</h2>
+        <div lang="ja">
+            <p>ソニー・東大・藝大による社会連携講座「Ignite Your Ambition」の一環として開発・実装を担当しました。大型の装置設計に加え、体験者がわたあめ機の中に入るという没入型の演出と、食体験としての安全性を両立させるためのシステム構築を行いました。</p>
+        </div>
+        <div lang="en">
+            <p>I was in charge of development and implementation as part of "Ignite Your Ambition," a social cooperation course by Sony, the University of Tokyo, and Tokyo University of the Arts. In addition to designing the large-scale equipment, I built a system that balances the immersive production of participants entering the cotton candy machine with the safety of the food experience.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="clipboard-list"></i> Project History</h2>
+        <div class="list-item publication">
+            <span class="item-idx">S4</span>
+            <div>
+                <a href="https://ignite-your-ambition.com/" target="_blank" class="pub-link-block">
+                    <strong>Ignite Your Ambition (ソニー東大藝大社会連携講座)</strong>, わたぱ PJ 開発担当
+                    <span class="activity-desc">巨大わたあめ機の中に入ってわたあめになり、自分と友達を食べる体験「わたぱ！」の実装。 (2021年)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ryota NITTO</p>
+    </footer>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.body.classList.toggle('lang-en', lang === 'en');
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        localStorage.setItem('preferred-lang', lang);
+    }
+
+    lucide.createIcons();
+
+    const savedLang = localStorage.getItem('preferred-lang') || 'ja';
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>

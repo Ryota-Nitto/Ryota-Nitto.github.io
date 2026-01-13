@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>大阪万博「水空」 | Ryota NITTO</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="nav-header">
+        <a href="../index.html" class="back-link">
+            <i data-lucide="arrow-left"></i> Back to Home
+        </a>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ja')" id="btn-ja" class="active">JP</button> /
+            <button onclick="setLanguage('en')" id="btn-en">EN</button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="tags">
+            <span class="tag">VR</span>
+            <span class="tag">Cross-modal</span>
+        </div>
+        <h1 class="project-title">大阪万博「水空」</h1>
+        <p class="description">
+            <span lang="ja">映像・音声・気流のクロスモーダル刺激により、空気清浄感を高め、食事体験を豊かにする空間演出。</span>
+            <span lang="en">Space production that enhances the sense of air cleanliness and enriches the dining experience through cross-modal stimuli of video, sound, and airflow.</span>
+        </p>
+    </header>
+
+    <div class="hero-visual">
+        <img src="../images/suikuu.jpeg" alt="Suikuu Visual">
+    </div>
+
+    <section>
+        <h2><i data-lucide="lightbulb"></i> Concept</h2>
+        <div lang="ja">
+            <p>2025年大阪・関西万博のサントリー・ダイキンによる高原レストラン「水空」における体験設計プロジェクトです。映像、音響、そしてダイキンの空調技術による気流を組み合わせたクロスモーダルな体験を提供し、食事中の「空気清浄感」や「おいしさ」を感覚的に増幅させることを目指しました。</p>
+        </div>
+        <div lang="en">
+            <p>This is an experience design project for the Suntory and Daikin "Suikuu" Alpine Restaurant at Expo 2025 Osaka, Kansai. By combining video, sound, and airflow from Daikin's air conditioning technology, we aimed to intuitively amplify the perception of "air cleanliness" and "deliciousness" during dining through a cross-modal experience.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="cpu"></i> My Role & Implementation</h2>
+        <div lang="ja">
+            <p>本プロジェクトにおいて、クロスモーダルコンテンツの技術設計およびその効果の実証実験を担当しました。VR技術と環境刺激を統合し、特定の環境的文脈を再現することで、食体験における新たな付加価値の創出に取り組んでいます。</p>
+        </div>
+        <div lang="en">
+            <p>In this project, I was in charge of the technical design of the cross-modal content and the verification experiments to prove its effectiveness. By integrating VR technology and environmental stimuli to reproduce specific environmental contexts, I worked on creating new added value in the dining experience.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="briefcase"></i> Social Implementation</h2>
+        <div class="list-item publication">
+            <span class="item-idx">S7</span>
+            <div>
+                <a href="https://www.daikin.co.jp/press/2024/20240909" target="_blank" class="pub-link-block">
+                    <strong>大阪・関西万博 サントリー・ダイキン 高原レストラン「水空」</strong>, 技術設計・実証担当
+                    <span class="activity-desc">サントリー・ダイキンによるレストランにおいて、空気清浄感を提示するクロスモーダルコンテンツの設計と効果の実証。 (2024年 - 2025年)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ryota NITTO</p>
+    </footer>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.body.classList.toggle('lang-en', lang === 'en');
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        localStorage.setItem('preferred-lang', lang);
+    }
+
+    lucide.createIcons();
+
+    const savedLang = localStorage.getItem('preferred-lang') || 'ja';
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>

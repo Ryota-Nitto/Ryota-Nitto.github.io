@@ -72,8 +72,8 @@ body.lang-en [lang="en"] { display: block; }
 /* メインビジュアル（画像・動画） */
 .hero-visual {
     width: 100%;
-    /* aspect-ratio: 16 / 9; */
-    aspect-ratio: 4400 / 1902;
+    aspect-ratio: 16 / 9;
+    /* aspect-ratio: 4400 / 1902; */
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 15px;
