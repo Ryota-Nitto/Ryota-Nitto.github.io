@@ -69,6 +69,8 @@ body.lang-en [lang="en"] { display: block; }
     font-weight: bold;
 }
 
+.tag-award { display: inline-block; padding: 2px 10px; margin-left: 8px; font-size: 0.75rem; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--sub-accent), var(--accent)); border-radius: 4px; }
+
 /* メインビジュアル（画像・動画） */
 .hero-visual {
     width: 100%;

@@ -6,6 +6,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* アプリリンク用の特別なボタンボタンスタイル */
+        .btn-appstore {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            /* 背景を白から少し透過したグレー、あるいはアクセントカラーの枠線のみにする */
+            background: rgba(255, 255, 255, 0.1); 
+            color: #fff;
+            border: 1px solid var(--border);
+            padding: 8px 16px; /* 12px 24px から縮小 */
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem; /* 0.95rem から縮小 */
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-appstore:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-appstore svg {
+            width: 16px; /* アイコンも少し小さく */
+            height: 16px;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,6 +61,8 @@
             <span lang="ja">音楽の中でドラムを叩くように歩き、身体運動を演奏へと昇華させる iOS アプリケーション。</span>
             <span lang="en">An iOS application that transforms walking into a musical performance, as if playing drums within the music.</span>
         </p>
+        
+        
     </header>
 
     <div class="hero-visual">
@@ -54,10 +87,14 @@
         <div lang="en">
             <p>Beatim Inc. was established to implement this experience in society. Developed as an iOS application, it offers a new walking/running experience through the integration of music and physical movement.</p>
         </div>
+
+        <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn-appstore">
+            <i data-lucide="download"></i> Download on the App Store
+        </a>
     </section>
 
     <section>
-        <h2><i data-lucide="award"></i> Projects & Awards</h2>
+        <h2><i data-lucide="history"></i> Project History</h2>
         
         <div class="list-item publication">
             <span class="item-idx">S6</span>
@@ -74,8 +111,9 @@
             <div>
                 <a href="https://ignite-your-ambition.com/" target="_blank" class="pub-link-block">
                     <strong>Ignite Your Ambition (ソニー東大藝大社会連携講座)</strong>, Beatim PJ プロジェクトリーダー
-                    <span class="activity-desc">歩行運動を音楽演奏へと昇華させる「Beatim」の社会実装に向けたピッチコンテストにて発表。 (2022年)</span>
-                </a> <span class="tag-award">審査員特別賞（2位）</span>
+                    <span class="activity-desc">歩行運動を音楽演奏へと昇華させる「Beatim」の社会実装に向けた活動において、自らのアイデアを元にチームを立ち上げ、開発・検証まで行い、ピッチコンテストにて発表。 (2022年)</span>
+                    <span class="tag-award">審査員特別賞（2位）</span>
+                </a>
             </div>
         </div>
     </section>

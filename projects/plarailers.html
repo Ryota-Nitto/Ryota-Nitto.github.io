@@ -6,6 +6,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Webサイト訪問ボタンのスタイル */
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1); 
+            color: #fff;
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-link:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-link svg {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
 </head>
 <body>
 
@@ -54,6 +84,10 @@
         <div lang="en">
             <p>As the founder and representative of the project, I led everything from team launch to hardware development and operation. The systems created so far have been presented and exhibited at several events, achieving both the presentation of new forms of play through engineering and the improvement of the team's technical capabilities.</p>
         </div>
+
+        <a href="https://plarailers.com" target="_blank" class="btn-link">
+            <i data-lucide="external-link"></i> Visit Website
+        </a>
     </section>
 
     <section>
