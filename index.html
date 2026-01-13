@@ -9,8 +9,6 @@
 
     <meta name="format-detection" content="telephone=no, address=no">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta property="og:title" content="日塔 諒太｜Ryota Nitto">
     <meta property="og:description" content="Transforming Monotonous Daily Life into a Playable Performance.">
     <meta property="og:image" content="https://nittoryota.com/images/face.jpeg">
@@ -39,8 +37,10 @@
             <span lang="ja">日塔 諒太</span>
             <span lang="en">Ryota NITTO</span>
         </h1>
-        <div class="name-sub" lang="ja">Ryota NITTO</div>
-        <div class="name-sub" lang="en">日塔 諒太</div>
+        <div class="name-sub">
+            <span lang="ja">Ryota NITTO</span>
+            <span lang="en">日塔 諒太</span>
+        </div>
 
         <div class="job-title">
             <span lang="ja">HCI研究者 / インタラクションデザイナー</span>
@@ -51,27 +51,20 @@
             <div>
                 <i data-lucide="building"></i>
                 <span lang="ja">東京大学 大学院新領域創成科学研究科<br>人間環境学専攻 人間環境情報学分野<br>割澤・福井・米谷・伴研究室</span>
-                <span lang="en">Human and Environment Informatics Lab.,<br>The University of Tokyo</span>
+                <span lang="en">Human and Environment Informatics Lab.,<br>Graduate School of Frontier Sciences,<br>The University of Tokyo</span>
             </div>
             <div>
                 <i data-lucide="user-round"></i>
-                <span lang="ja">博士後期課程 / リサーチ・フェロー</span>
-                <span lang="en">Ph.D Student / Research Fellow</span>
+                <span lang="ja">博士後期課程 / SPRINGフェロー</span>
+                <span lang="en">Ph.D. Student / SPRING Fellow</span>
             </div>
             <div>
                 <i data-lucide="map-pin"></i>
                 <span lang="ja">277-0882 柏市柏の葉5-1-5 環境棟 304</span>
-                <span lang="en">277-0882 #304 Environmental Studies, 5-1-5, Kashiwanoha, Kashiwa, Chiba, Japan</span>
+                <span lang="en">#304 Environmental Studies Bldg., 5-1-5 Kashiwanoha, Kashiwa, Chiba 277-0882, Japan</span>
             </div>
             <div><i data-lucide="mail"></i>nittoryota [at] lelab.t.u-tokyo.ac.jp</div>
-            <!-- <div>
-                <i data-lucide="phone"></i>
-                <span lang="ja">080-3431-4708</span>
-                <span lang="en">+81 80-3431-4708</span>
-            </div> -->
         </div>
-
-
 
         <div class="lang-switch">
             <button onclick="setLanguage('ja')" id="btn-ja" class="active">JP</button>
@@ -88,7 +81,7 @@
                     <span lang="ja">単調な日常を、演奏するように楽しめる体験へ。</span>
                     <span lang="en">Transforming Monotonous Daily Life into a Playable Performance.</span>
                 </span>
-                <span class="mission-secondary" data-i18n="mission-secondary">
+                <span class="mission-secondary">
                     <span lang="ja">食事や歩行など、日常には飽きてしまう繰り返しのプロセスに溢れています。私は、そこにインタラクション技術を組み込むことで、既定の時系列構造をユーザー自身が主体的に書き換える「演奏体験」へと変容させます。</span>
                     <span lang="en">Daily life is filled with repetitive processes like eating and walking. By integrating interaction technology, I transform these predefined temporal structures into a "performance experience" that users can proactively rewrite.</span>
                 </span>
@@ -97,13 +90,15 @@
 
         <h2 class="section-title"><i data-lucide="layout"></i> Creative Projects</h2>
         <div class="grid">
-
             <a href="projects/dynadrink.html" class="project-card">
                 <img src="images/DynaDrink.png" class="card-img" alt="DynaDrink">
                 <div class="project-body">
                     <h3 class="project-title">DynaDrink</h3>
                     <div class="tags"><span class="tag">Human-Food Interaction</span></div>
-                    <p class="card-text">飲んでいる途中に濃度を変え、甘さの錯覚や不可能な飲料体験を生み出す。</p>
+                    <p class="card-text">
+                        <span lang="ja">飲んでいる途中に濃度を変え、甘さの錯覚や不可能な飲料体験を生み出す。</span>
+                        <span lang="en">Creating sweetness illusions and impossible beverage experiences by changing concentration during consumption.</span>
+                    </p>
                 </div>
             </a>
 
@@ -111,55 +106,66 @@
                 <img src="images/beatim.png" class="card-img">
                 <div class="project-body">
                     <h3 class="project-title">Beatim</h3>
-                    <div style="margin-bottom:10px;"><span class="tag">Sonic Interaction</span><span class="tag">Mobile App</span></div>
-                    <p class="card-text">音楽の中でドラムを叩くように歩き、身体運動を演奏へと昇華させる。</p>
-                    <!-- <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn">
-                        <i data-lucide="link"></i> App Store
-                    </a> -->
+                    <div class="tags"><span class="tag">Sonic Interaction</span><span class="tag">Mobile App</span></div>
+                    <p class="card-text">
+                        <span lang="ja">音楽の中でドラムを叩くように歩き、身体運動を演奏へと昇華させる。</span>
+                        <span lang="en">Walking like playing drums in music, sublimating physical movement into a performance.</span>
+                    </p>
                 </div>
             </a>
-            
             
             <a href="projects/suikuu.html" class="project-card">
                 <img src="images/suikuu.jpeg" class="card-img">
                 <div class="project-body">
-                    <h3 class="project-title">大阪万博「水空」</h3>
-                    <div style="margin-bottom:10px;">
-                        <span class="tag">VR</span>
-                        <span class="tag">Cross-modal</span>
-                    </div>
-                    <p class="card-text">映像と音声と気流のクロスモーダルな体験で空気清浄感を高める食事体験。</p>
+                    <h3 class="project-title">
+                        <span lang="ja">大阪万博「水空」</span>
+                        <span lang="en">EXPO 2025 "Suikuu"</span>
+                    </h3>
+                    <div class="tags"><span class="tag">VR</span><span class="tag">Cross-modal</span></div>
+                    <p class="card-text">
+                        <span lang="ja">映像と音声と気流のクロスモーダルな体験で空気清浄感を高める食事体験。</span>
+                        <span lang="en">A cross-modal dining experience enhancing air cleanliness through video, sound, and airflow.</span>
+                    </p>
                 </div>
             </a>
 
             <a href="projects/watapa.html" class="project-card">
                 <img src="images/watapa.jpeg" class="card-img">
                 <div class="project-body">
-                    <h3 class="project-title">わたぱ！</h3>
-                    <div style="margin-bottom:10px;">
-                        <span class="tag">Human-Food Interaction</span>
-                        <span class="tag">Body Extension</span>
-                    </div>
-                    <p class="card-text">巨大わたあめ機に入って「自分を食べる」という全く新しい体験設計。</p>
+                    <h3 class="project-title">
+                        <span lang="ja">わたぱ！</span>
+                        <span lang="en">Watapa!</span>
+                    </h3>
+                    <div class="tags"><span class="tag">Human-Food Interaction</span><span class="tag">Body Extension</span></div>
+                    <p class="card-text">
+                        <span lang="ja">巨大わたあめ機に入って「自分を食べる」という全く新しい体験設計。</span>
+                        <span lang="en">A completely new experience design where you enter a giant cotton candy machine and "eat yourself".</span>
+                    </p>
                 </div>
             </a>
 
             <a href="projects/plarailers.html" class="project-card">
                 <img src="images/plarailers.jpg" class="card-img">
                 <div class="project-body">
-                    <h3 class="project-title">Plarailers</h3>
-                    <div style="margin-bottom:10px;">
-                        <span class="tag">IoT</span>
-                        <span class="tag">System Hack</span>
-                    </div>
-                    <p class="card-text">鉄道玩具を電子改造し、高度な鉄道運行システムを構築。</p>
+                    <h3 class="project-title">
+                        <span lang="ja">プラレーラーズ</span>
+                        <span lang="en">Plarailers</span>
+                    </h3>
+                    <div class="tags"><span class="tag">IoT</span><span class="tag">System Hack</span></div>
+                    <p class="card-text">
+                        <span lang="ja">鉄道玩具を電子改造し、高度な鉄道運行システムを構築。</span>
+                        <span lang="en">Modifying toy trains to build advanced railway operation systems.</span>
+                    </p>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
 
         <h2 class="section-title"><i data-lucide="file-text"></i> Research Publications</h2>
 
-        <h3 class="sub-section-title">国際論文誌（査読付き）</h3>
+        <h3 class="sub-section-title">
+            <span lang="ja">国際論文誌（査読付き）</span>
+            <span lang="en">Journal Articles (Peer-reviewed)</span>
+        </h3>
         <div class="list-item publication">
             <span class="item-idx">J1</span>
             <div>
@@ -171,10 +177,13 @@
             </div>
         </div>
 
-        <h3 class="sub-section-title">国際会議（査読付き）</h3>
+        <h3 class="sub-section-title">
+            <span lang="ja">国際会議（査読付き）</span>
+            <span lang="en">International Conferences (Peer-reviewed)</span>
+        </h3>
         <div class="list-item publication">
             <span class="item-idx">C5</span>
-            <div href="" target="_blank" class="pub-link-block">
+            <div class="pub-link-block">
                 Chijing Wang, <strong>Ryota Nitto</strong>, Takuo Kuroki, Yuki Ban, Miki Nakai, Jun'ichi Shimizu, Tomoyoshi Ashikaga and Shin'ichi Warisawa: 
                 "Differential Contributions of Physiological Features Across Early, Mid, and Late Sleep Phases to Next Morning Cognitive Performance", 
                 <em>BIOSIGNALS 2026</em>, March 2026.
@@ -213,110 +222,170 @@
             </a>
         </div>
 
-        <h3 class="sub-section-title">国内会議（査読付き）</h3>
+        <h3 class="sub-section-title">
+            <span lang="ja">国内会議（査読付き）</span>
+            <span lang="en">Domestic Conferences (Peer-reviewed)</span>
+        </h3>
 
         <div class="list-item publication">
-            <span class="item-idx">D5</span>
-            <div href="" target="_blank" class="pub-link-block">
-                <strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一: 
-                "うつろいドリンク: コクとキレを両立するための連続的な飲料混合率変化グラスの提案", 
-                第30回 情報処理学会シンポジウム INTERACTION 2026, 2026年3月.
-                <span class="tag-award">プレミアム採択</span>
+            <span class="item-idx">P1</span>
+            <div class="pub-link-block">
+                <span lang="ja"><strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一</span>
+                <span lang="en"><strong>Ryota Nitto</strong>, Shin'ichi Komiya, Yuki Ban, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"うつろいドリンク: コクとキレを両立するための連続的な飲料混合率変化グラスの提案", </span>
+                <span lang="en">"Utsuroi Drink: Proposal of a Continuous Beverage Mixing Ratio Variation Glass to Balance 'Koku' and 'Kire'", </span>
+                <span lang="ja">第30回 情報処理学会シンポジウム INTERACTION 2026, 2026年3月.</span>
+                <span lang="en">IPSJ Interaction 2026, March 2026.</span>
+                <span class="tag-award">
+                    <span lang="ja">プレミアム採択</span>
+                    <span lang="en">Premium Selection</span>
+                </span>
             </div>
         </div>
 
-        <h3 class="sub-section-title">国内会議（査読なし）</h3>
-
+        <h3 class="sub-section-title">
+            <span lang="ja">国内会議（査読なし）</span>
+            <span lang="en">Domestic Conferences (Non-peer-reviewed)</span>
+        </h3>
         <div class="list-item publication">
             <span class="item-idx">D11</span>
             <a href="https://jp.his.gr.jp/events/symposium2025/" target="_blank" class="pub-link-block">
-                川田 健仁, 小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
-                "食品ごとに異なる良好な飲食体験の環境的文脈を再現した 多感覚刺激提示によるおいしさ向上", 
-                第26回 ヒューマンインタフェースシンポジウム（HI 2025）, 2025年9月.
-                <span class="tag-award">ショートビデオ優秀賞</span>
-            </a> 
+                <span lang="ja">川田 健仁, 小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一</span>
+                <span lang="en">Kento Kawada, Shin'ichi Komiya, <strong>Ryota Nitto</strong>, Yuki Ban, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"食品ごとに異なる良好な飲食体験の環境的文脈を再現した多感覚刺激提示によるおいしさ向上", </span>
+                <span lang="en">"Enhancing Deliciousness through Multi-sensory Stimuli Reproducing Environmental Contexts for Different Food Experiences", </span>
+                <span lang="ja">第26回 ヒューマンインタフェースシンポジウム（HI 2025）, 2025年9月.</span>
+                <span lang="en">Human Interface Symposium 2025, September 2025.</span>
+                <span class="tag-award">
+                    <span lang="ja">ショートビデオ優秀賞</span>
+                    <span lang="en">Best Short Video Award</span>
+                </span>
+            </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D10</span>
             <a href="https://jp.his.gr.jp/events/symposium2025/" target="_blank" class="pub-link-block">
-                小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
-                "咀嚼・嚥下中の食品温感変化を再現した頸部への温度刺激提示による食品温感増強", 
-                第26回 ヒューマンインタフェースシンポジウム (HI 2025), 2025年9月.
-                <span class="tag-award">ショートビデオ優秀賞</span>
-            </a> 
+                <span lang="ja">小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一</span>
+                <span lang="en">Shin'ichi Komiya, <strong>Ryota Nitto</strong>, Yuki Ban, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"咀嚼・嚥下中の食品温感変化を再現した頸部への温度刺激提示による食品温感増強", </span>
+                <span lang="en">"Enhancement of Food Thermal Perception by Presenting Thermal Stimuli to the Neck Reproducing Changes in Food Temperature During Chewing and Swallowing", </span>
+                <span lang="ja">第26回 ヒューマンインタフェースシンポジウム (HI 2025), 2025年9月.</span>
+                <span lang="en">Human Interface Symposium 2025, September 2025.</span>
+                <span class="tag-award">
+                    <span lang="ja">ショートビデオ優秀賞</span>
+                    <span lang="en">Best Short Video Award</span>
+                </span>
+            </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D9</span>
             <a href="https://conference.vrsj.org/ac2025/program/doc/2D2-05.pdf" target="_blank" class="pub-link-block">
-                <strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一: 
-                "摂食行動に応じた環境の視聴覚刺激の低減による風味知覚の向上", 
-                第30回 日本バーチャルリアリティ学会大会 (VRSJ 2025), 2025年9月.
+                <span lang="ja"><strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一</span>
+                <span lang="en"><strong>Ryota Nitto</strong>, Shin'ichi Komiya, Yuki Ban, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"摂食行動に応じた環境の視聴覚刺激の低減による風味知覚の向上", </span>
+                <span lang="en">"Improvement of Flavor Perception by Reducing Environmental Audiovisual Stimuli According to Eating Behavior", </span>
+                <span lang="ja">第30回 日本バーチャルリアリティ学会大会 (VRSJ 2025), 2025年9月.</span>
+                <span lang="en">VRSJ 2025, September 2025.</span>
             </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D8</span>
             <a href="https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202502239930311982" target="_blank" class="pub-link-block">
-                王 馳景, <strong>日塔 諒太</strong>, 伴 祐樹, 中井 美希, 清水 淳一, 今井 洋輔, 割澤 伸一: 
-                "8時間睡眠条件下におけるコルチゾール分泌と睡眠の質の関係性", 
-                日本睡眠学会 第49回定期学術集会, 2025年6月.
+                <span lang="ja">王 馳景, <strong>日塔 諒太</strong>, 伴 祐樹, 中井 美希, 清水 淳一, 今井 洋輔, 割澤 伸一</span>
+                <span lang="en">Chijing Wang, <strong>Ryota Nitto</strong>, Yuki Ban, Miki Nakai, Jun'ichi Shimizu, Yosuke Imai, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"8時間睡眠条件下におけるコルチゾール分泌と睡眠の質の関係性", </span>
+                <span lang="en">"Relationship Between Cortisol Secretion and Sleep Quality Under 8-hour Sleep Conditions", </span>
+                <span lang="ja">日本睡眠学会 第49回定期学術集会, 2025年6月.</span>
+                <span lang="en">49th Annual Meeting of the Japanese Society of Sleep Research, June 2025.</span>
             </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D7</span>
             <a href="https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202502254306723326" target="_blank" class="pub-link-block">
-                王 馳景, 中井 美希, <strong>日塔 諒太</strong>, 伴 祐樹, 清水 淳一, 今井 洋輔, 割澤 伸一: 
-                "人間のサーカディアンリズムに沿った空調制御が睡眠の質と翌日の認知機能に与える影響", 
-                日本睡眠学会 第49回定期学術集会, 2025年6月.
+                <span lang="ja">王 馳景, 中井 美希, <strong>日塔 諒太</strong>, 伴 祐樹, 清水 淳一, 今井 洋輔, 割澤 伸一</span>
+                <span lang="en">Chijing Wang, Miki Nakai, <strong>Ryota Nitto</strong>, Yuki Ban, Jun'ichi Shimizu, Yosuke Imai, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"人間のサーカディアンリズムに沿った空調制御が睡眠の質と翌日の認知機能に与える影響", </span>
+                <span lang="en">"Effects of Air Conditioning Control According to Human Circadian Rhythms on Sleep Quality and Next-day Cognitive Function", </span>
+                <span lang="ja">日本睡眠学会 第49回定期学術集会, 2025年6月.</span>
+                <span lang="en">49th Annual Meeting of the Japanese Society of Sleep Research, June 2025.</span>
             </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D6</span>
             <a href="https://jp.his.gr.jp/events/symposium2024/" target="_blank" class="pub-link-block">
-                小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
-                "摂食に同期した後頸部への冷感刺激による食品冷感の増強", 
-                第25回 ヒューマンインタフェースシンポジウム (HI 2024), 2024年9月. 
-                <span class="tag-award">優秀プレゼンテーション賞</span><span class="tag-award">ショートビデオ優秀賞</span>
-            </a> 
+                <span lang="ja">小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一</span>
+                <span lang="en">Shin'ichi Komiya, <strong>Ryota Nitto</strong>, Yuki Ban, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"摂食に同期した後頸部への冷感刺激による食品冷感の増強", </span>
+                <span lang="en">"Enhancement of Food Coldness Perception by Cold Stimuli to the Posterior Neck Synchronized with Eating", </span>
+                <span lang="ja">第25回 ヒューマンインタフェースシンポジウム (HI 2024), 2024年9月. </span>
+                <span lang="en">Human Interface Symposium 2024, September 2024.</span>
+                <span class="tag-award">
+                    <span lang="ja">優秀プレゼンテーション賞</span>
+                    <span lang="en">Best Presentation Award</span>
+                </span>
+                <span class="tag-award">
+                    <span lang="ja">ショートビデオ優秀賞</span>
+                    <span lang="en">Best Short Video Award</span>
+                </span>
+            </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D5</span>
             <a href="https://conference.vrsj.org/ac2024/program/doc/3G-08.pdf" target="_blank" class="pub-link-block">
-                <strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一: 
-                "咀嚼・嚥下中の視聴覚ノイズの遮断による風味と食感の向上", 
-                第29回 日本バーチャルリアリティ学会大会 (VRSJ 2024), 2024年9月.
+                <span lang="ja"><strong>日塔 諒太</strong>, 小宮 晨一, 伴 祐樹, 割澤 伸一</span>
+                <span lang="en"><strong>Ryota Nitto</strong>, Shin'ichi Komiya, Yuki Ban, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"咀嚼・嚥下中の視聴覚ノイズの遮断による風味と食感の向上", </span>
+                <span lang="en">"Improvement of Flavor and Texture by Blocking Audiovisual Noise During Chewing and Swallowing", </span>
+                <span lang="ja">第29回 日本バーチャルリアリティ学会大会 (VRSJ 2024), 2024年9月.</span>
+                <span lang="en">VRSJ 2024, September 2024.</span>
             </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D4</span>
             <a href="https://www.ipsj.or.jp/event/taikai/86/WEB/data/pdf/5X-04.html" target="_blank" class="pub-link-block">
-                王 馳景, <strong>日塔 諒太</strong>, 黒木 琢央, 伴 祐樹, 中井 美希, 清水 淳一, 足利 朋義, 割澤 伸一: 
-                "睡眠時生体情報から日中生産性を推測するTransformerベースモデルの構築", 
-                情報処理学会 第86回全国大会, 5X-04, 2024年3月.
+                <span lang="ja">王 馳景, <strong>日塔 諒太</strong>, 黒木 琢央, 伴 祐樹, 中井 美希, 清水 淳一, 足利 朋義, 割澤 伸一</span>
+                <span lang="en">Chijing Wang, <strong>Ryota Nitto</strong>, Takuo Kuroki, Yuki Ban, Miki Nakai, Jun'ichi Shimizu, Tomoyoshi Ashikaga, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"睡眠時生体情報から日中生産性を推測するTransformerベースモデルの構築", </span>
+                <span lang="en">"Construction of a Transformer-based Model to Infer Daytime Productivity from Sleep Biosignals", </span>
+                <span lang="ja">情報処理学会 第86回全国大会, 2024年3月.</span>
+                <span lang="en">86th IPSJ National Convention, March 2024.</span>
             </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D3</span>
             <a href="https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202402213710856857" target="_blank" class="pub-link-block">
-                小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一: 
-                "嚥下と同期した頸部への温度提示による食品の温冷感増強手法の検討", 
-                第24回 計測自動制御学会システムインテグレーション部門講演会 (SI2023), 2D2-07, 2023年12月.
-                <span class="tag-award">優秀講演賞</span>
-            </a> 
+                <span lang="ja">小宮 晨一, <strong>日塔 諒太</strong>, 伴 祐樹, 割澤 伸一</span>
+                <span lang="en">Shin'ichi Komiya, <strong>Ryota Nitto</strong>, Yuki Ban, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"嚥下と同期した頸部への温度提示による食品の温冷感増強手法の検討", </span>
+                <span lang="en">"Study on a Method to Enhance the Cold and Warm Sensation of Food by Thermal Presentation to the Neck Synchronized with Swallowing", </span>
+                <span lang="ja">第24回 計測自動制御学会システムインテグレーション部門講演会 (SI2023), 2023年12月.</span>
+                <span lang="en">SICE SI2023, December 2023.</span>
+                <span class="tag-award">
+                    <span lang="ja">優秀講演賞</span>
+                    <span lang="en">Best Presentation Award</span>
+                </span>
+            </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D2</span>
             <a href="https://www.knt.co.jp/ec/jasts57/index.html" target="_blank" class="pub-link-block">
-                <strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一: 
-                "味覚刺激の時系列変化パターンが甘味強度知覚に与える影響の検討", 
-                日本味と匂学会 第57回大会 (JASTS 2023), 2023年9月.
+                <span lang="ja"><strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一</span>
+                <span lang="en"><strong>Ryota Nitto</strong>, Yuki Ban, Rui Fukui, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"味覚刺激の時系列変化パターンが甘味強度知覚に与える影響の検討", </span>
+                <span lang="en">"Investigation of the Effect of Temporal Change Patterns of Taste Stimuli on the Perception of Sweetness Intensity", </span>
+                <span lang="ja">日本味と匂学会 第57回大会 (JASTS 2023), 2023年9月.</span>
+                <span lang="en">JASTS 2023, September 2023.</span>
             </a>
         </div>
         <div class="list-item publication">
             <span class="item-idx">D1</span>
             <a href="https://conference.vrsj.org/ac2022/program/doc/3E4-5.pdf" target="_blank" class="pub-link-block">
-                <strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一: 
-                "飲料飲用の過程に応じた糖度制御による味知覚変化", 
-                第27回日本バーチャルリアリティ学会大会 (VRSJ 2022), 1A2-4, 2022年9月.
+                <span lang="ja"><strong>日塔 諒太</strong>, 伴 祐樹, 福井 類, 割澤 伸一</span>
+                <span lang="en"><strong>Ryota Nitto</strong>, Yuki Ban, Rui Fukui, Shin'ichi Warisawa</span>: 
+                <span lang="ja">"飲料飲用の過程に応じた糖度制御による味知覚変化", </span>
+                <span lang="en">"Changes in Taste Perception via Sugar Concentration Control According to the Drinking Process", </span>
+                <span lang="ja">第27回日本バーチャルリアリティ学会大会 (VRSJ 2022), 2022年9月.</span>
+                <span lang="en">VRSJ 2022, September 2022.</span>
             </a>
         </div>
 
@@ -324,18 +393,31 @@
 
         <div class="list-item">
             <span class="item-idx">S7</span>
-            <a href="https://www.daikin.co.jp/press/2024/20240909#:~:text=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E5%AD%A6%E3%81%A8%E5%85%B1%E5%90%8C%E9%96%8B%E7%99%BA%E3%81%97%E3%81%9F%E5%80%8B%E5%AE%A4%20%E3%80%8C%E7%A9%BA%E6%B0%97%E3%81%A7%E6%97%85%E3%81%99%E3%82%8B%E3%83%80%E3%82%A4%E3%83%8B%E3%83%B3%E3%82%B0%E3%80%8D" target="_blank" class="pub-link-block">
-                <strong>大阪・関西万博 サントリー・ダイキン 高原レストラン「水空」</strong>, 技術設計・実証担当<br>
-            <span class="activity-desc">サントリー・ダイキンによるレストランにおいて、空気清浄感を提示するクロスモーダルコンテンツの設計と効果の実証。 (2024年 - 2025年)</span>
+            <a href="https://www.daikin.co.jp/press/2024/20240909" target="_blank" class="pub-link-block">
+                <strong>
+                    <span lang="ja">大阪・関西万博 サントリー・ダイキン 高原レストラン「水空」</span>
+                    <span lang="en">EXPO 2025 Suntory/Daikin Alpine Restaurant "Suikuu"</span>
+                </strong>, 
+                <span lang="ja">技術設計・実証担当</span>
+                <span lang="en">Technical Design & Verification</span><br>
+                <span class="activity-desc">
+                    <span lang="ja">サントリー・ダイキンによるレストランにおいて、空気清浄感を提示するクロスモーダルコンテンツの設計と効果の実証。(2024 - 2025)</span>
+                    <span lang="en">Design and verification of cross-modal content to enhance the perception of air cleanliness in the Suntory/Daikin joint restaurant project. (2024 - 2025)</span>
+                </span>
             </a>
         </div>
 
         <div class="list-item">
             <span class="item-idx">S6</span>
             <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="pub-link-block">
-                <strong>株式会社Beatim</strong>, 創業者<br>
+                <strong>
+                    <span lang="ja">株式会社Beatim</span>
+                    <span lang="en">Beatim Inc.</span>
+                </strong>, 
+                <span lang="ja">創業者</span><span lang="en">Founder</span><br>
                 <span class="activity-desc">
-                    「歩行を演奏に変える」体験の社会実装を目的に法人を設立。プロダクト開発、知財管理、および資金調達活動に従事。 (2023年)
+                    <span lang="ja">「歩行を演奏に変える」体験の社会実装を目的に法人を設立。プロダクト開発、知財管理、および資金調達活動に従事。(2023)</span>
+                    <span lang="en">Founded the company to socially implement the "walking into performance" experience. Engaged in product development, IP management, and fundraising. (2023)</span>
                 </span>
             </a>
         </div>
@@ -343,77 +425,142 @@
         <div class="list-item">
             <span class="item-idx">S5</span>
             <a href="https://ignite-your-ambition.com/" target="_blank" class="pub-link-block">
-                <strong>Ignite Your Ambition (ソニー東大藝大社会連携講座)</strong>, Beatim PJ プロジェクトリーダー<br>
-                <span class="activity-desc">歩行運動を音楽演奏へと昇華させる「Beatim」の社会実装に向けた活動において、自らのアイデアを元にチームを立ち上げ、開発・検証まで行い、ピッチコンテストにて発表。 (2022年)</span>  
-                <span class="tag-award">審査員特別賞（2位）</span>
+                <strong>Ignite Your Ambition</strong>, 
+                <span lang="ja">Beatim PJ プロジェクトリーダー</span>
+                <span lang="en">Beatim PJ Leader</span><br>
+                <span class="activity-desc">
+                    <span lang="ja">歩行運動を音楽演奏へと昇華させる「Beatim」の社会実装に向けた活動において、自らのアイデアを元にチームを立ち上げ、開発・検証を行い、ピッチコンテストにて発表。(2022)</span>
+                    <span lang="en">Established a team based on an original idea for the social implementation of "Beatim," leading development and verification for a pitch contest. (2022)</span>
+                </span>  
+                <span class="tag-award">
+                    <span lang="ja">審査員特別賞（2位）</span>
+                    <span lang="en">Judges' Special Award (2nd Place)</span>
+                </span>
             </a>
         </div>
 
         <div class="list-item">
             <span class="item-idx">S4</span>
             <a href="https://ignite-your-ambition.com/" target="_blank" class="pub-link-block">
-                <strong>Ignite Your Ambition (ソニー東大藝大社会連携講座)</strong>, わたぱ PJ 開発担当<br>
-                <span class="activity-desc">巨大わたあめ機の中に入ってわたあめになり、自分と友達を食べる体験「わたぱ！」の実装 (2021年)</span>  
+                <strong>Ignite Your Ambition</strong>, 
+                <span lang="ja">わたぱ PJ 開発担当</span>
+                <span lang="en">Watapa! PJ Developer</span><br>
+                <span class="activity-desc">
+                    <span lang="ja">巨大わたあめ機の中に入ってわたあめになり、自分と友達を食べる体験「わたぱ！」の実装。(2021)</span>
+                    <span lang="en">Implemented "Watapa!", an experience where participants enter a giant cotton candy machine and "eat" themselves or their friends. (2021)</span>
+                </span>  
             </a>
         </div>
 
         <div class="list-item">
             <span class="item-idx">S3</span>
-            <a href="https://sites.google.com/g.ecc.u-tokyo.ac.jp/postcovid19/n9#:~:text=%E3%80%90%E5%84%AA%E7%A7%80%E8%B3%9E%E3%80%91%E3%80%8C%2D%E9%81%93%E7%84%A1%E3%81%8D%E9%81%93%E3%82%92%E3%82%86%E3%81%91%2D%20%E5%86%92%E9%99%BA%E8%80%85%E3%83%8A%E3%83%93%E3%80%8D%E3%80%80%E8%A3%BD%E4%BD%9C%EF%BC%9A%E6%97%A5%E5%A1%94%20%E8%AB%92%E5%A4%AA" target="_blank" class="pub-link-block">
-                <strong>機械工学科 IoT演習</strong>, -道無き道をゆけ- 冒険者ナビ プロジェクトリーダー<br>
-                <span class="activity-desc">GPS情報から登山中の道外れをブザーで知らせるシステムの開発 (2020年)</span>
-                <span class="tag-award">優秀賞</span>
+            <a href="https://sites.google.com/g.ecc.u-tokyo.ac.jp/postcovid19/n9" target="_blank" class="pub-link-block">
+                <strong>
+                    <span lang="ja">機械工学科 IoT演習</span>
+                    <span lang="en">Dept. of Mechanical Engineering, IoT Exercise</span>
+                </strong>, 
+                <span lang="ja">-道無き道をゆけ- 冒険者ナビ PJリーダー</span>
+                <span lang="en">Project Leader, "Adventure Navigator"</span><br>
+                <span class="activity-desc">
+                    <span lang="ja">GPS情報から登山中の道外れをブザーで知らせるシステムの開発。(2020)</span>
+                    <span lang="en">Developed a system that uses GPS information to alert climbers via buzzer when they stray from the path. (2020)</span>
+                </span>
+                <span class="tag-award">
+                    <span lang="ja">優秀賞</span>
+                    <span lang="en">Excellent Award</span>
+                </span>
             </a> 
         </div>
 
         <div class="list-item">
             <span class="item-idx">S2</span>
             <a href="https://sites.google.com/g.ecc.u-tokyo.ac.jp/postcovid19/n3" target="_blank" class="pub-link-block">
-                <strong>機械工学科 スターリングエンジン演習</strong>, 16班 プロジェクトリーダー<br>
-                <span class="activity-desc">スターリングエンジンの設計と金属加工による実装 (2020年)</span>  
-                <span class="tag-award">優秀賞</span>
+                <strong>
+                    <span lang="ja">機械工学科 スターリングエンジン演習</span>
+                    <span lang="en">Dept. of Mechanical Engineering, Stirling Engine Exercise</span>
+                </strong>, 
+                <span lang="ja">プロジェクトリーダー</span>
+                <span lang="en">Project Leader</span><br>
+                <span class="activity-desc">
+                    <span lang="ja">スターリングエンジンの設計と金属加工による実装。(2020)</span>
+                    <span lang="en">Design and implementation of a Stirling engine through metal processing. (2020)</span>
+                </span>  
+                <span class="tag-award">
+                    <span lang="ja">優秀賞</span>
+                    <span lang="en">Excellent Award</span>
+                </span>
             </a>
         </div>
 
         <div class="list-item">
             <span class="item-idx">S1</span>
             <a href="https://plarailers.com" target="_blank" class="pub-link-block">
-                <strong>ものづくりサークル プラレーラーズ (Plarailers)</strong>, 設立者, 代表<br>
-                <span class="activity-desc">鉄道玩具を電子改造し、自律走行や高度な運行管理を実現するシステムの構築。チームの立ち上げからハードウェア開発、チーム運営に従事。 (2019年 - 2023年)</span>
+                <strong>
+                    <span lang="ja">プラレーラーズ (Plarailers)</span>
+                    <span lang="en">Plarailers</span>
+                </strong>, 
+                <span lang="ja">設立者, 代表</span><span lang="en">Founder, President</span><br>
+                <span class="activity-desc">
+                    <span lang="ja">鉄道玩具を電子改造し、自律走行や高度な運行管理を実現するシステムの構築。チーム立ち上げから開発、運営に従事。(2019 - 2023)</span>
+                    <span lang="en">Built a system for autonomous driving and advanced operation management of toy trains. Engaged in team founding, development, and management. (2019 - 2023)</span>
+                </span>
             </a>
         </div>
 
         <h2 class="section-title"><i data-lucide="graduation-cap"></i> Education</h2>
 
         <div class="list-item">
-            <span class="item-idx">2024 - 現在</span>
+            <span class="item-idx">2024 - <span lang="ja">現在</span><span lang="en">Present</span></span>
             <div>
-                <strong>東京大学 大学院新領域創成科学研究科</strong> 人間環境学専攻 博士後期課程<br>
-                <span class="activity-desc">人間環境情報学分野 割澤・福井・米谷・伴研究室 / 指導教員：割澤 伸一 教授</span>
+                <strong>
+                    <span lang="ja">東京大学 大学院新領域創成科学研究科</span>
+                    <span lang="en">Graduate School of Frontier Sciences, The University of Tokyo</span>
+                </strong><br>
+                <span class="activity-desc">
+                    <span lang="ja">人間環境学専攻 博士後期課程 / 指導教員：割澤 伸一 教授</span>
+                    <span lang="en">Ph.D. Student, Dept. of Human and Engineered Environmental Studies / Advisor: Prof. Shin'ichi Warisawa</span>
+                </span>
             </div>
         </div>
 
         <div class="list-item">
             <span class="item-idx">2022 - 2024</span>
             <div>
-                <strong>東京大学 大学院新領域創成科学研究科</strong> 人間環境学専攻 修士課程<br>
-                <span class="activity-desc">人間環境情報学分野 割澤・福井・米谷・伴研究室 修了</span>
+                <strong>
+                    <span lang="ja">東京大学 大学院新領域創成科学研究科</span>
+                    <span lang="en">Graduate School of Frontier Sciences, The University of Tokyo</span>
+                </strong><br>
+                <span class="activity-desc">
+                    <span lang="ja">人間環境学専攻 修士課程 修了</span>
+                    <span lang="en">Master of Environmental Studies</span>
+                </span>
             </div>
         </div>
 
         <div class="list-item">
             <span class="item-idx">2018 - 2022</span>
             <div>
-                <strong>東京大学 工学部 機械工学科</strong><br>
-                <span class="activity-desc">割澤・福井・米谷・伴研究室 卒業</span>
+                <strong>
+                    <span lang="ja">東京大学 工学部 機械工学科</span>
+                    <span lang="en">Faculty of Engineering, The University of Tokyo</span>
+                </strong><br>
+                <span class="activity-desc">
+                    <span lang="ja">卒業</span>
+                    <span lang="en">B.Eng. in Mechanical Engineering</span>
+                </span>
             </div>
         </div>
 
         <div class="list-item">
             <span class="item-idx">2015 - 2018</span>
             <div>
-                <strong>東京都立武蔵高等学校</strong><br>
-                <span class="activity-desc">卒業</span>
+                <strong>
+                    <span lang="ja">東京都立武蔵高等学校</span>
+                    <span lang="en">Tokyo Metropolitan Musashi High School</span>
+                </strong><br>
+                <span class="activity-desc">
+                    <span lang="ja">卒業</span><span lang="en">Graduated</span>
+                </span>
             </div>
         </div>
 
@@ -447,13 +594,16 @@
             </div>
         </div>
 
-        <h2 class="section-title"><i data-lucide="graduation-cap"></i> Fellowship</h2>
+        <h2 class="section-title"><i data-lucide="award"></i> Fellowship</h2>
 
         <div class="list-item">
             <span class="item-idx">F1</span>
             <div>
-                <strong>JST 次世代研究者挑戦的研究プログラム（SPRING）GXプロジェクト フェロー</strong><br>
-                2024年4月 - 現在
+                <strong>
+                    <span lang="ja">JST 次世代研究者挑戦的研究プログラム（SPRING）GXプロジェクト フェロー</span>
+                    <span lang="en">JST Support for Pioneering Research Initiated by the Next Generation (SPRING) GX Project Fellow</span>
+                </strong><br>
+                <span class="activity-desc">2024.04 - <span lang="ja">現在</span><span lang="en">Present</span></span>
             </div>
         </div>
 
@@ -462,76 +612,83 @@
         <div class="list-item">
             <span class="item-idx">W4</span>
             <div>
-                <strong>リサーチ・アシスタント (RA)</strong>, 東京大学 大学院新領域創成科学研究科<br>
-                2024年4月 - 現在
+                <strong>
+                    <span lang="ja">リサーチ・アシスタント (RA)</span>
+                    <span lang="en">Research Assistant (RA)</span>
+                </strong>, 
+                <span lang="ja">東京大学 大学院新領域創成科学研究科</span>
+                <span lang="en">The University of Tokyo</span><br>
+                <span class="activity-desc">2024.04 - <span lang="ja">現在</span><span lang="en">Present</span></span>
             </div>
         </div>
 
         <div class="list-item">
             <span class="item-idx">W3</span>
             <div>
-                <strong>新規事業開発インターンシップ</strong>, ソニーグループ株式会社 Sony Startup Pitch Contest<br>
-                2022年8月 - 2022年9月 (2ヶ月)
+                <strong>
+                    <span lang="ja">新規事業開発インターンシップ</span>
+                    <span lang="en">New Business Development Internship</span>
+                </strong>, 
+                <span lang="ja">ソニーグループ株式会社 Sony Startup Pitch Contest</span>
+                <span lang="en">Sony Group Corporation</span><br>
+                <span class="activity-desc">2022.08 - 2022.09</span>
             </div>
         </div>
 
         <div class="list-item">
             <span class="item-idx">W2</span>
             <div>
-                <strong>非常勤講師</strong>, SAPIX 中学部 数学科<br>
-                2020年4月 - 現在
+                <strong>
+                    <span lang="ja">非常勤講師</span>
+                    <span lang="en">Part-time Instructor</span>
+                </strong>, 
+                <span lang="ja">SAPIX 中学部 数学科</span>
+                <span lang="en">SAPIX (Mathematics)</span><br>
+                <span class="activity-desc">2020.04 - <span lang="ja">現在</span><span lang="en">Present</span></span>
             </div>
         </div>
 
         <div class="list-item">
             <span class="item-idx">W1</span>
             <div>
-                <strong>非常勤講師</strong>, 個別指導プラスジム<br>
-                2018年7月 - 2022年3月
+                <strong>
+                    <span lang="ja">非常勤講師</span>
+                    <span lang="en">Part-time Instructor</span>
+                </strong>, 
+                <span lang="ja">個別指導プラスジム</span>
+                <span lang="en">PlusGym</span><br>
+                <span class="activity-desc">2018.07 - 2022.03</span>
             </div>
         </div>
     </main>
 </div>
 
 <footer>
-    <p>© 2026 Ryota NITTO</p>
+    <p>© 2026 Ryota NITTO - The University of Tokyo</p>
 </footer>
 
 <script>
     function setLanguage(lang) {
-        // bodyにクラスを付与/削除してCSSで表示を切り替える
         if (lang === 'en') {
             document.body.classList.add('lang-en');
         } else {
             document.body.classList.remove('lang-en');
         }
-
-        // ボタンの見た目（Active状態）を更新
         document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
         document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-
-        // 3. URLをリロードなしで書き換え（History API）
         const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?lang=' + lang;
         window.history.pushState({ path: newUrl }, '', newUrl);
     }
 
     try {
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
-    } catch (e) {
-        console.error("Lucide icons failed to load.");
-    }
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    } catch (e) { console.error("Lucide icons failed to load."); }
 
     window.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang'); // URLから ?lang=... を取得
-
-        if (lang === 'en' || lang === 'ja') {
-            setLanguage(lang);
-        }
+        const lang = urlParams.get('lang') || 'ja';
+        setLanguage(lang);
     });
 </script>
-
 </body>
 </html>
