@@ -106,8 +106,10 @@ body.lang-en div[lang="en"], body.lang-en p[lang="en"], body.lang-en h1[lang="en
 
 /* マウスを乗せた時（ホバー時）の設定 */
 .contact-info a:hover {
-    color: var(--accent) !important;   /* 水色に光らせる */
+    color: #fff; 
     text-decoration: underline !important; 
+    text-underline-offset: 0.3em !important;
+    text-decoration-color: var(--accent) !important; 
     opacity: 1;
 }
 
@@ -147,7 +149,7 @@ body.lang-en div[lang="en"], body.lang-en p[lang="en"], body.lang-en h1[lang="en
 .list-item { display: flex; align-items: flex-start; padding: 12px 0; font-size: 0.85rem; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.03); }
 .list-item .item-idx { width: 80px; flex-shrink: 0; color: var(--accent); font-weight: bold; }
 .pub-link-block { text-decoration: none; color: inherit; display: block; transition: 0.2s; }
-.pub-link-block:hover { text-decoration: underline; color: #fff; text-decoration-color: var(--accent); }
+.pub-link-block:hover { text-decoration: underline; color: #fff; text-underline-offset: 0.3em; text-decoration-color: var(--accent); }
 .pub-link-block strong { color: #fff; }
 .tag-award { display: inline-block; padding: 2px 10px; margin-left: 8px; font-size: 0.75rem; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--sub-accent), var(--accent)); border-radius: 4px; }
 
