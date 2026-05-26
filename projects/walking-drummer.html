@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Walking Drummer | Ryota NITTO</title>
+    <link rel="canonical" href="https://nittoryota.com/projects/walking-drummer.html">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* アプリリンク用の特別なボタンボタンスタイル */
+        .btn-appstore {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            /* 背景を白から少し透過したグレー、あるいはアクセントカラーの枠線のみにする */
+            background: rgba(255, 255, 255, 0.1); 
+            color: #fff;
+            border: 1px solid var(--border);
+            padding: 8px 16px; /* 12px 24px から縮小 */
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem; /* 0.95rem から縮小 */
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-appstore:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-appstore svg {
+            width: 16px; /* アイコンも少し小さく */
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav class="nav-header">
+        <a href="/" class="back-link">
+            <i data-lucide="arrow-left"></i> Back to Home
+        </a>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ja')" id="btn-ja" class="active">JP</button> /
+            <button onclick="setLanguage('en')" id="btn-en">EN</button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="tags">
+            <span class="tag">Sonic Interaction</span>
+            <span class="tag">Mobile App</span>
+        </div>
+        <h1 class="project-title">Walking Drummer</h1>
+        <p class="description">
+            <span lang="ja">音楽の中でドラムを叩くように歩き、身体運動を演奏へと昇華させる iOS アプリケーション。</span>
+            <span lang="en">An iOS application that transforms walking into a musical performance, as if playing drums within the music.</span>
+        </p>
+        
+        
+    </header>
+
+    <div class="hero-visual">
+        <img src="../images/walking-drummer.png" alt="Walking Drummer Main Visual">
+    </div>
+
+    <section>
+        <h2><i data-lucide="lightbulb"></i> Concept</h2>
+        <div lang="ja">
+            <p>「歩行」という日常の単調な繰り返しを、主体的な「演奏」へと変容させるプロジェクトです。ユーザーの歩行リズムに合わせて音楽のビートを生成・変化させることで、既定の時系列構造を自ら書き換える体験を設計しました。</p>
+        </div>
+        <div lang="en">
+            <p>This project aims to transform the monotonous daily routine of "walking" into a proactive "performance". By generating and changing musical beats in sync with the user's walking rhythm, we designed an experience where users can rewrite the predefined temporal structure themselves.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="cpu"></i> Implementation</h2>
+        <div lang="ja">
+            <p>歩行時の足音やステップのタイミングを音楽内のドラム演奏へ割り当て、歩く行為そのものがリズムを作る入力になるように設計しました。ユーザーは音楽をただ聴くのではなく、歩行を通じて参加し、楽曲の時間構造に身体で関わることができます。</p>
+        </div>
+        <div lang="en">
+            <p>The system maps footsteps and step timing to drum performance inside music, turning walking itself into rhythmic input. Users do not merely listen to music; they participate through walking and physically engage with the temporal structure of the song.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="file-text"></i> Publications</h2>
+
+        <div class="list-item publication">
+            <span class="item-idx">C4</span>
+            <a href="https://doi.org/10.1145/3795011.3795030" target="_blank" class="pub-link-block">
+                <strong>Ryota Nitto</strong>, Kensuke Nomura, Yuki Ban, Keisuke Nagato and Yuki Sugiue: 
+                "Walking Drummer: Enabling Musical Participation via Footstep Percussion for Enhanced Engagement", 
+                <em>Proceedings of the Augmented Humans International Conference 2026 (AHs 2026)</em>, March 2026, Okinawa, Japan.
+            </a>
+        </div>
+
+        <div class="list-item publication">
+            <span class="item-idx">P4</span>
+            <a href="https://doi.org/10.1145/3795011.3797414" target="_blank" class="pub-link-block">
+                <strong>Ryota Nitto</strong>, Kensuke Nomura, Yuki Ban, Keisuke Nagato and Yuki Sugiue: 
+                "Demonstration of Walking Drummer: Enabling Musical Participation via Footstep Percussion While Walking", 
+                <em>Proceedings of the Augmented Humans International Conference 2026 (AHs 2026)</em>, March 2026, Okinawa, Japan.
+            </a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Ryota NITTO - The University of Tokyo</p>
+    </footer>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.body.classList.toggle('lang-en', lang === 'en');
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        localStorage.setItem('preferred-lang', lang);
+    }
+
+    lucide.createIcons();
+
+    const savedLang = localStorage.getItem('preferred-lang') || 'ja';
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>

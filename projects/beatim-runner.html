@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Beatim Runner | Ryota NITTO</title>
+    <link rel="canonical" href="https://nittoryota.com/projects/beatim-runner.html">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* アプリリンク用の特別なボタンボタンスタイル */
+        .btn-appstore {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            /* 背景を白から少し透過したグレー、あるいはアクセントカラーの枠線のみにする */
+            background: rgba(255, 255, 255, 0.1); 
+            color: #fff;
+            border: 1px solid var(--border);
+            padding: 8px 16px; /* 12px 24px から縮小 */
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem; /* 0.95rem から縮小 */
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-appstore:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-appstore svg {
+            width: 16px; /* アイコンも少し小さく */
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav class="nav-header">
+        <a href="/" class="back-link">
+            <i data-lucide="arrow-left"></i> Back to Home
+        </a>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ja')" id="btn-ja" class="active">JP</button> /
+            <button onclick="setLanguage('en')" id="btn-en">EN</button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="tags">
+            <span class="tag">Running Support</span>
+            <span class="tag">Mobile App</span>
+        </div>
+        <h1 class="project-title">Beatim Runner</h1>
+        <p class="description">
+            <span lang="ja">ランナーのペースをセンシングし、音楽のビートを早めたり遅めたりすることで、ペース維持をサポートするiOSアプリケーション。</span>
+            <span lang="en">An iOS application that senses a runner's pace and supports pace keeping by speeding up or slowing down the music beat.</span>
+        </p>
+        
+        
+    </header>
+
+    <div class="hero-visual">
+        <img src="../images/beatim-runner.png" alt="Beatim Runner Main Visual">
+    </div>
+
+    <section>
+        <h2><i data-lucide="lightbulb"></i> Concept</h2>
+        <div lang="ja">
+            <p>ランニング中のペース維持は、身体感覚だけに頼ると難しく、通知や数値表示だけでは走行体験を途切れさせてしまいます。Beatim Runnerは、ランナーのペースをセンシングし、目標ペースとの差に応じて音楽のビートを自然に変化させることで、音楽に乗りながら走り続ける体験を設計しました。</p>
+        </div>
+        <div lang="en">
+            <p>Maintaining pace while running can be difficult when relying only on body sensation, while numerical alerts can interrupt the running experience. Beatim Runner senses the runner's pace and naturally changes the music beat according to the gap from the target pace, helping users keep running with the music.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="cpu"></i> Social Implementation</h2>
+        <div lang="ja">
+            <p>Beatim Runnerの開発と社会実装を目的に「株式会社Beatim」を設立しました。App Storeにてアプリが配布されています。</p>
+        </div>
+        <div lang="en">
+            <p>Beatim Inc. was established to develop and socially implement Beatim Runner. The Beatim app currently distributed on the App Store is this runner-oriented pace support application.</p>
+        </div>
+
+        <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="btn-appstore">
+            <i data-lucide="download"></i> Download on the App Store
+        </a>
+    </section>
+
+    <section>
+        <h2><i data-lucide="history"></i> Project History</h2>
+
+        <div class="list-item publication">
+            <span class="item-idx">R3</span>
+            <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="pub-link-block">
+                <strong>Beatim Runner Version 5</strong>
+                <span class="activity-desc">
+                    <span lang="ja">2024年10月6日リリース。</span>
+                    <span lang="en">Released on October 6, 2024.</span>
+                </span>
+            </a>
+        </div>
+
+        <div class="list-item publication">
+            <span class="item-idx">R2</span>
+            <div class="pub-link-block">
+                <strong>Beatim Runner Version 4</strong>
+                <span class="activity-desc">
+                    <span lang="ja">2024年9月26日リリース。</span>
+                    <span lang="en">Released on September 26, 2024.</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="list-item publication">
+            <span class="item-idx">R1</span>
+            <div class="pub-link-block">
+                <strong>Beatim Runner Version 1</strong>
+                <span class="activity-desc">
+                    <span lang="ja">2023年8月19日リリース。</span>
+                    <span lang="en">Released on August 19, 2023.</span>
+                </span>
+            </div>
+        </div>
+        
+        <div class="list-item publication">
+            <span class="item-idx">S6</span>
+            <div>
+                <a href="https://apps.apple.com/us/app/beatim/id6444296567" target="_blank" class="pub-link-block">
+                    <strong>株式会社Beatim</strong>, 創業者
+                    <span class="activity-desc">音楽のビート変化によりランナーのペース維持を支援するアプリケーションの社会実装を目的に法人を設立。プロダクト開発、知財管理、および資金調達活動に従事。 (2023年)</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="list-item publication">
+            <span class="item-idx">S5</span>
+            <div>
+                <a href="https://ignite-your-ambition.com/" target="_blank" class="pub-link-block">
+                    <strong>Ignite Your Ambition (ソニー東大藝大社会連携講座)</strong>, Beatim PJ プロジェクトリーダー
+                    <span class="activity-desc">音楽と身体運動を統合するランニング支援アプリケーション「Beatim」の社会実装に向けた活動において、自らのアイデアを元にチームを立ち上げ、開発・検証まで行い、ピッチコンテストにて発表。 (2022年)</span>
+                    <span class="tag-award">審査員特別賞（2位）</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ryota NITTO - The University of Tokyo</p>
+    </footer>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.body.classList.toggle('lang-en', lang === 'en');
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        localStorage.setItem('preferred-lang', lang);
+    }
+
+    lucide.createIcons();
+
+    const savedLang = localStorage.getItem('preferred-lang') || 'ja';
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>

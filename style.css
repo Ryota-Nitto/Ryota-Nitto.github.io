@@ -124,7 +124,6 @@ body.lang-en div[lang="en"], body.lang-en p[lang="en"], body.lang-en h1[lang="en
     background: linear-gradient(135deg, rgba(0, 242, 255, 0.15) 0%, rgba(188, 19, 254, 0.12) 100%);
     padding: 35px;
     border-radius: 15px;
-    border-left: 4px solid var(--sub-accent);
     margin-bottom: 50px;
 }
 .mission-title { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.25em; margin-bottom: 20px; font-weight: 800; display: block; }
