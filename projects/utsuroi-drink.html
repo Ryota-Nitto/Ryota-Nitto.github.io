@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>うつろいドリンク | Ryota NITTO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://nittoryota.com/projects/utsuroi-drink.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="nav-header">
+        <a href="/" class="back-link">
+            <i data-lucide="arrow-left"></i> Back to Home
+        </a>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ja')" id="btn-ja" class="active">JP</button> /
+            <button onclick="setLanguage('en')" id="btn-en">EN</button>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="tags">
+            <span class="tag">Human-Food Interaction</span>
+            <span class="tag">Taste Design</span>
+        </div>
+        <h1 class="project-title">
+            <span lang="ja">うつろいドリンク</span>
+            <span lang="en">Utsuroi Drink</span>
+        </h1>
+        <p class="description">
+            <span lang="ja">飲む過程で飲料の混合率を連続的に変化させることで、濃厚な「コク」と後味の「キレ」を両立するグラス型インタフェース。</span>
+            <span lang="en">A glass interface that balances rich "koku" and clean "kire" by continuously changing the beverage mixing ratio during consumption.</span>
+        </p>
+    </header>
+
+    <div class="hero-visual">
+        <img src="../images/utsuroi-drink.png" alt="Utsuroi Drink">
+    </div>
+
+    <section>
+        <h2><i data-lucide="lightbulb"></i> Concept</h2>
+        <div lang="ja">
+            <p>「コク」と「キレ」はどちらも飲料体験において重要ですが、単一の飲料で両立させることは困難です。うつろいドリンクは、コクを担う飲料とキレを担う飲料をグラス内で層状に分離し、飲むにつれて混合率が変わるように設計することで、時間的に移ろう味わいを生み出します。</p>
+        </div>
+        <div lang="en">
+            <p>"Koku" and "kire" are both important qualities in beverage experiences, but they are difficult to balance within a single liquid. Utsuroi Drink separates beverages responsible for each quality into layers inside a glass and changes their mixing ratio over time, creating a taste experience that shifts during drinking.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="cpu"></i> Implementation</h2>
+        <div lang="ja">
+            <p>グラス内部の仕切り構造により、上層の飲料と下層の飲料が飲用中に連続的に混ざるプロトタイプを制作しました。黒ビールとジンジャーエールを用いた検証では、濃厚な風味から爽快な後味へ移行する体験を評価しました。</p>
+        </div>
+        <div lang="en">
+            <p>We built a prototype that uses an internal partition structure to continuously mix the upper and lower beverages while drinking. In a validation using stout beer and ginger ale, we evaluated an experience that transitions from a rich flavor to a refreshing aftertaste.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="file-text"></i> Publication</h2>
+
+        <div class="list-item publication">
+            <span class="item-idx">DP1</span>
+            <div>
+                <a href="https://www.interaction-ipsj.org/proceedings/2026/data/pdf/1C58.pdf" target="_blank" class="pub-link-block">
+                    <span lang="ja"><strong>日塔 諒太</strong>, 小宮 晨一, 割澤 伸一, 伴 祐樹</span>
+                    <span lang="en"><strong>Ryota Nitto</strong>, Shin'ichi Komiya, Shin'ichi Warisawa, Yuki Ban</span>:
+                    <span lang="ja">"うつろいドリンク: コクとキレを両立するための連続的な飲料混合率変化グラスの提案", </span>
+                    <span lang="en">"Utsuroi Drink: Proposal of a Continuous Beverage Mixing Ratio Variation Glass to Balance 'Koku' and 'Kire'", </span>
+                    <span lang="ja">第30回 情報処理学会シンポジウム INTERACTION 2026, 1C58, 2026年3月.</span>
+                    <span lang="en">IPSJ Interaction 2026, 1C58, March 2026.</span>
+                    <span class="tag-award">
+                        <span lang="ja">インタラクティブ発表賞</span>
+                        <span lang="en">Interactive Presentation Award</span>
+                    </span>
+                    <span class="tag-award">
+                        <span lang="ja">プレミアム採択</span>
+                        <span lang="en">Premium Selection</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-lucide="newspaper"></i> Related Article</h2>
+
+        <div class="list-item publication">
+            <span class="item-idx">A1</span>
+            <div>
+                <a href="https://www.itmedia.co.jp/news/articles/2603/19/news042.html" target="_blank" class="pub-link-block">
+                    山下 (Seamless):
+                    "「コク」と「キレ」の両方を味わえるコップ、東大が開発 黒ビール→ジンジャーエールに変わっていくとどう感じる？",
+                    <em>ITmedia NEWS</em>, 2026年3月19日.
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ryota NITTO - The University of Tokyo</p>
+    </footer>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.body.classList.toggle('lang-en', lang === 'en');
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        localStorage.setItem('preferred-lang', lang);
+    }
+
+    lucide.createIcons();
+
+    const savedLang = localStorage.getItem('preferred-lang') || 'ja';
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>
