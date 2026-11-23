@@ -133,6 +133,20 @@ h2 {
     color: #fff;
 }
 
+.pub-link-inline {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.pub-link-inline:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+    color: #fff;
+}
+
 .pub-link-block strong {
     color: #fff;
 }

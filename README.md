@@ -34,12 +34,12 @@
 
 - `dynadrink.html`: DynaDrink
 - `utsuroi-drink.html`: うつろいドリンク
-- `beatim-runner.html`: Beatim Runner
+- `beatim.html`: Beatim
 - `walking-drummer.html`: Walking Drummer
 - `suikuu.html`: 大阪万博 高原レストラン 水空
 - `watapa.html`: わたぱ！
 - `plarailers.html`: プラレーラーズ
-- `beatim.html`: `beatim-runner.html`へのリダイレクトページ
+- `beatim-for-running.html`: `beatim.html`へのリダイレクトページ(旧URL)
 
 ## ディレクトリ構成
 
@@ -51,7 +51,7 @@
 ├── style.css
 ├── images/
 │   ├── DynaDrink.png
-│   ├── beatim-runner.png
+│   ├── beatim-for-running.png
 │   ├── beatim.png
 │   ├── face.jpeg
 │   ├── plarailers.jpeg
@@ -61,7 +61,7 @@
 │   ├── walking-drummer.png
 │   └── watapa.png
 └── projects/
-    ├── beatim-runner.html
+    ├── beatim-for-running.html
     ├── beatim.html
     ├── dynadrink.html
     ├── plarailers.html
